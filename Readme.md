@@ -1,7 +1,7 @@
 # Личный проект «Седона» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Mariya Kuznetsova](https://up.htmlacademy.ru/adaptive/15/user/191884).
-* Наставник: `Неизвестно`.
+* Наставник: [Альбина Токарчук](https://htmlacademy.ru/profile/id167491).
 
 ---
 
