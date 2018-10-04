@@ -1,0 +1,105 @@
+.feedback-form {
+  margin-bottom: 78px;
+}
+
+.feedback-form__intro {
+  margin: 0;
+  margin-bottom: 24px;
+  padding:0px 21px 22px 23px;
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
+  @include intro;
+}
+
+.feedback-form__fieldset {
+  margin: 0;
+  margin-bottom: 5px;
+  padding: 0px 20px 0px 20px;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
+  text-align: left;
+}
+
+.feedback-form__hint {
+  @include reset;
+  margin-bottom: 25px;
+  padding-top: 20px;
+
+  text-align: center;
+  font-weight: 700;
+}
+
+.field-form {
+  @include reset;
+  margin-bottom: 20px;
+
+  border: none;
+  background-color: #f2f2f2;
+
+  &::placeholder {
+    padding-left: 21px;
+
+    @include title;
+
+    font-weight: 700;
+    color: #000000;
+  }
+}
+
+.feedback-form__label {
+  @include intro;
+}
+
+.feedback-form__username {
+  height: 58px;
+  width: 230px;
+}
+
+.feedback-form__surname,
+.feedback-form__patronymic {
+  height: 58px;
+  width: 192px;
+}
+
+.feedback-form__phone,
+.feedback-form__email {
+  height: 58px;
+  width: 280px;
+  margin-top: 10px;
+}
+
+.feedback-form__contacts .feedback-form__label {
+  padding-left: 23px;
+}
+
+.feedback-form__label-filter {
+  padding-left: 70px;
+  padding-bottom: 52px;
+  float: left;
+
+  font-weight: 700;
+}
+
+.feedback-form__comment {
+  width: 279px;
+  height: 160px;
+
+  font-family: "PT Sans", Arial, sans-serif;
+}
+
+.feedback-form__text {
+  border-bottom: none;
+}
+
+.feedback-form__button {
+  width: 280px;
+  height: 58px;
+
+  border: none;
+  font-size: 21px;
+  line-height: 26px;
+
+  @include style-button;
+}

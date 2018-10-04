@@ -1,0 +1,10 @@
+.page-main__header {
+  width: 255px;
+  @include reset;
+  margin-bottom: 30px;
+  padding-left: 32px;
+
+  @include title;
+
+  font-weight: 700;
+}

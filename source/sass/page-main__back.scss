@@ -1,0 +1,21 @@
+.page-main__back {
+  height: 160px;
+  background-position: bottom;
+
+  @include image-back;
+}
+
+.index-back {
+  height: 389px;
+  background-position: center;
+
+  @include image-back;
+}
+
+.page-main__back-image {
+  margin-top: 51px;
+}
+
+.index-back_image {
+  margin-top: 90px;
+}
