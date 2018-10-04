@@ -1,26 +1,26 @@
 @font-face {
-  font-family: "PT Sans", Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   src: url("../fonts/ptsans.woff2");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "PT Sans", Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   src: url("../fonts/ptsansbold.woff2");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "PT Sans", Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   src: url("../fonts/ptsans.woff");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "PT Sans", Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   src: url("../fonts/ptsansbold.woff");
   font-weight: 700;
   font-style: normal;
@@ -31,7 +31,7 @@ body {
   margin: 0;
   padding: 0;
 
-  font-family: "PT Sans", Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 18px;
   line-height: 26px;
   font-weight: 400;
@@ -62,16 +62,16 @@ input[type="radio"].visually-hidden {
 }
 
 @import
-"normalize",
-"mixin",
-"header",
-"page-main__back",
-"page-main__header",
-"advantages",
-"hotel-search",
-"page-map",
-"page-footer",
-"gallery",
-"video",
-"feedback-form",
-"popup";
+  "normalize",
+  "mixin",
+  "header",
+  "page-main__back",
+  "page-main__header",
+  "advantages",
+  "hotel-search",
+  "page-map",
+  "page-footer",
+  "gallery",
+  "video",
+  "feedback-form",
+  "popup";
