@@ -1,7 +1,18 @@
+$main-color: #333333;
+
+$main-font: "PT Sans", "Arial", sans-serif;
+
+$letter-type: uppercase;
+
+@mixin list {
+  list-style: none;
+}
+
 @mixin style-button {
   font-weight: 700;
   color: #ffffff;
   background-color: #81b3d2;
+  text-transform: $letter-type;
 }
 
 @mixin image-back {
@@ -11,8 +22,6 @@
   background-color: #c6d0e6;
   background-repeat: no-repeat;
 }
-
-$main-color: #333333;
 
 @mixin intro {
   font-size: 14px;
@@ -28,4 +37,27 @@ $main-color: #333333;
 @mixin reset {
   margin: 0;
   padding: 0;
+}
+
+@mixin popup {
+  background-color: #ffffff;
+  box-shadow: 0 7px 15px 0 rgba(0, 1, 1, 0.15);
+  text-transform: $letter-type;
+}
+
+@mixin popup-title {
+  @include reset;
+  @include title;
+
+  margin-bottom: 27px;
+}
+
+@mixin popup-hint {
+  @include reset;
+  margin-bottom: 23px;
+
+  font-size: 14px;
+  line-height: 24px;
+
+  color: $main-color;
 }

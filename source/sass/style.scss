@@ -1,76 +1,20 @@
-@font-face {
-  font-family: "PT Sans", "Arial", sans-serif;
-  src: url("../fonts/ptsans.woff2");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "PT Sans", "Arial", sans-serif;
-  src: url("../fonts/ptsansbold.woff2");
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "PT Sans", "Arial", sans-serif;
-  src: url("../fonts/ptsans.woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "PT Sans", "Arial", sans-serif;
-  src: url("../fonts/ptsansbold.woff");
-  font-weight: 700;
-  font-style: normal;
-}
-
-body {
-  width: 320px;
-  margin: 0;
-  padding: 0;
-
-  font-family: "PT Sans", "Arial", sans-serif;
-  font-size: 18px;
-  line-height: 26px;
-  font-weight: 400;
-  text-align: center;
-  color: #000000;
-}
-
-.visually-hidden:not(:focus):not(:active),
-input[type="checkbox"].visually-hidden,
-input[type="radio"].visually-hidden {
-  position: absolute;
-
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-
-  white-space: nowrap;
-
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
-.site-list {
-  list-style: none;
-}
-
-@import "normalize",
-  "mixin",
-  "header",
-  "page-main__back",
-  "page-main__header",
-  "advantages",
-  "hotel-search",
-  "page-map",
-  "page-footer",
-  "gallery",
-  "video",
-  "feedback-form",
-  "popup";
+@import "normalize";
+@import "mixin";
+@import "fonts";
+@import "body";
+@import "./block/page-header";
+@import "./block/main-nav";
+@import "./block/page-main";
+@import "./block/advantages";
+@import "./block/advantages-detail";
+@import "./block/hotel-search";
+@import "./block/page-map";
+@import "./block/page-footer";
+@import "./block/hashtag";
+@import "./block/social";
+@import "./block/copyright";
+@import "./block/gallery";
+@import "./block/video";
+@import "./block/feedback-form";
+@import "./block/popup-failure";
+@import "./block/popup-success";

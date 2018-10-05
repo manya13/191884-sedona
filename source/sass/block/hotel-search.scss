@@ -1,6 +1,8 @@
 .hotel-search {
   @include reset;
   margin-bottom: 60px;
+
+  text-transform: $letter-type;
 }
 
 .hotel-search a {
@@ -15,7 +17,7 @@
 .hotel-search__instruction {
   margin: 0;
   margin-bottom: 50px;
-  padding: 0 30px 0 30px;
+  padding: 0;
 
   font-size: 14px;
   line-height: 24px;
@@ -24,11 +26,11 @@
 }
 
 .hotel-search__button {
+  @include style-button;
+
   width: 280px;
   margin: 0;
   padding: 17px 47px 19px 47px;
 
   font-size: 21px;
-
-  @include style-button;
 }

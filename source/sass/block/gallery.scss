@@ -1,15 +1,18 @@
 .gallery__intro {
+  @include intro;
+
   margin: 0;
   margin-bottom: 22px;
-  padding: 0 24px 30px 27px;
+  padding: 0;
 
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 
-  @include intro;
+  text-transform: $letter-type;
 }
 
 .gallery__list {
   @include reset;
+  @include list;
   padding-top: 5px;
 
   text-align: left;
@@ -32,6 +35,8 @@
 
 .gallery__photo-title {
   padding-top: 10px;
+
+  text-transform: $letter-type;
 }
 
 .gallery__author-photo {

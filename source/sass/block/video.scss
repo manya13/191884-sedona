@@ -1,19 +1,21 @@
 .video {
   margin-bottom: 133px;
+
+  text-transform: $letter-type;
 }
 
 .video__title {
   @include reset;
+  @include title;
+
   margin-bottom: 23px;
   padding-top: 7px;
-
-  @include title;
 }
 
 .video__description {
+  @include intro;
+
   margin: 0;
   margin-bottom: 35px;
   padding: 0 41px 0 43px;
-
-  @include intro;
 }

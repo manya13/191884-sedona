@@ -3,13 +3,14 @@
 }
 
 .feedback-form__intro {
+  @include intro;
+
   margin: 0;
   margin-bottom: 24px;
   padding: 0 21px 22px 23px;
 
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-
-  @include intro;
+  text-transform: $letter-type;
 }
 
 .feedback-form__fieldset {
@@ -29,6 +30,7 @@
 
   text-align: center;
   font-weight: 700;
+  text-transform: $letter-type;
 }
 
 .field-form {
@@ -39,9 +41,9 @@
   background-color: #f2f2f2;
 
   &::placeholder {
-    padding-left: 21px;
-
     @include title;
+
+    padding-left: 21px;
 
     font-weight: 700;
     color: #000000;
@@ -50,6 +52,7 @@
 
 .feedback-form__label {
   @include intro;
+  text-transform: $letter-type;
 }
 
 .feedback-form__username {
@@ -86,7 +89,7 @@
   width: 279px;
   height: 160px;
 
-  font-family: "PT Sans", "Arial", sans-serif;
+  font-family: $main-font;
 }
 
 .feedback-form__text {
@@ -94,12 +97,12 @@
 }
 
 .feedback-form__button {
+  @include style-button;
+
   width: 280px;
   height: 58px;
 
   border: none;
   font-size: 21px;
   line-height: 26px;
-
-  @include style-button;
 }

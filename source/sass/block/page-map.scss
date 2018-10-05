@@ -1,0 +1,10 @@
+.page-map {
+  @include reset;
+
+  width: 320px;
+  height: 350px;
+
+  margin-bottom: 38px;
+
+  background-image: url("./img/bg-map-mobile@1x.jpg");
+}

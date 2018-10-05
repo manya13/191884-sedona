@@ -1,0 +1,21 @@
+.popup-failure {
+  @include popup;
+
+  padding: 42px 56px 0 57px;
+}
+
+.popup-failure__title {
+  @include popup-title;
+}
+
+.popup-failure__hint {
+  @include popup-hint;
+}
+
+.popup-failure__button {
+  @include style-button;
+
+  margin-bottom: 35px;
+  padding: 19px 79px 19px 78px;
+  border: none;
+}
