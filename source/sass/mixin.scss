@@ -38,26 +38,3 @@ $letter-type: uppercase;
   margin: 0;
   padding: 0;
 }
-
-@mixin popup {
-  background-color: #ffffff;
-  box-shadow: 0 7px 15px 0 rgba(0, 1, 1, 0.15);
-  text-transform: $letter-type;
-}
-
-@mixin popup-title {
-  @include reset;
-  @include title;
-
-  margin-bottom: 27px;
-}
-
-@mixin popup-hint {
-  @include reset;
-  margin-bottom: 23px;
-
-  font-size: 14px;
-  line-height: 24px;
-
-  color: $main-color;
-}

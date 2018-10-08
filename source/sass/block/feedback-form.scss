@@ -33,23 +33,6 @@
   text-transform: $letter-type;
 }
 
-.field-form {
-  @include reset;
-  margin-bottom: 20px;
-
-  border: none;
-  background-color: #f2f2f2;
-
-  &::placeholder {
-    @include title;
-
-    padding-left: 21px;
-
-    font-weight: 700;
-    color: #000000;
-  }
-}
-
 .feedback-form__label {
   @include intro;
   text-transform: $letter-type;

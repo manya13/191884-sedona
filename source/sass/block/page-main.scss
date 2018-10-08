@@ -4,21 +4,21 @@
   height: 160px;
 
   background-position: bottom;
-}
 
-.page-main__back--index {
-  @include image-back;
+  &--index {
+    @include image-back;
 
-  height: 389px;
-  background-position: center;
+    height: 389px;
+    background-position: center;
+  }
 }
 
 .page-main__back-image {
   margin-top: 51px;
-}
 
-.page-main__back-image--index {
-  margin-top: 90px;
+  &--index {
+    margin-top: 90px;
+  }
 }
 
 .page-main__header {
