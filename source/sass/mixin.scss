@@ -1,0 +1,40 @@
+$main-color: #333333;
+
+$main-font: "PT Sans", "Arial", sans-serif;
+
+$letter-type: uppercase;
+
+@mixin list {
+  list-style: none;
+}
+
+@mixin style-button {
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #81b3d2;
+  text-transform: $letter-type;
+}
+
+@mixin image-back {
+  margin-bottom: 39px;
+
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-color: #c6d0e6;
+  background-repeat: no-repeat;
+}
+
+@mixin intro {
+  font-size: 14px;
+  line-height: 26px;
+  color: $main-color;
+}
+
+@mixin title {
+  font-size: 18px;
+  line-height: 26px;
+}
+
+@mixin reset {
+  margin: 0;
+  padding: 0;
+}

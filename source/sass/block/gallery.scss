@@ -1,0 +1,50 @@
+.gallery__intro {
+  @include intro;
+
+  margin: 0;
+  margin-bottom: 22px;
+  padding: 0;
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
+  text-transform: $letter-type;
+}
+
+.gallery__list {
+  @include reset;
+  @include list;
+  padding-top: 5px;
+
+  text-align: left;
+}
+
+.gallery__item {
+  padding: 0 20px 16px 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  margin-bottom: 28px;
+}
+
+.gallery__photo-title,
+.gallery__author-photo,
+.gallery__like {
+  @include reset;
+
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.gallery__photo-title {
+  padding-top: 10px;
+
+  text-transform: $letter-type;
+}
+
+.gallery__author-photo {
+  color: $main-color;
+}
+
+.gallery__like {
+  padding-top: 10px;
+
+  font-weight: 700;
+}

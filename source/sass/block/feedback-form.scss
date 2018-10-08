@@ -1,0 +1,91 @@
+.feedback-form {
+  margin-bottom: 78px;
+}
+
+.feedback-form__intro {
+  @include intro;
+
+  margin: 0;
+  margin-bottom: 24px;
+  padding: 0 21px 22px 23px;
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  text-transform: $letter-type;
+}
+
+.feedback-form__fieldset {
+  margin: 0;
+  margin-bottom: 5px;
+  padding: 0 20px 0 20px;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
+  text-align: left;
+}
+
+.feedback-form__hint {
+  @include reset;
+  margin-bottom: 25px;
+  padding-top: 20px;
+
+  text-align: center;
+  font-weight: 700;
+  text-transform: $letter-type;
+}
+
+.feedback-form__label {
+  @include intro;
+  text-transform: $letter-type;
+}
+
+.feedback-form__username {
+  height: 58px;
+  width: 230px;
+}
+
+.feedback-form__surname,
+.feedback-form__patronymic {
+  height: 58px;
+  width: 192px;
+}
+
+.feedback-form__phone,
+.feedback-form__email {
+  height: 58px;
+  width: 280px;
+  margin-top: 10px;
+}
+
+.feedback-form__contacts .feedback-form__label {
+  padding-left: 23px;
+}
+
+.feedback-form__label-filter {
+  padding-left: 70px;
+  padding-bottom: 52px;
+  float: left;
+
+  font-weight: 700;
+}
+
+.feedback-form__comment {
+  width: 279px;
+  height: 160px;
+
+  font-family: $main-font;
+}
+
+.feedback-form__text {
+  border-bottom: none;
+}
+
+.feedback-form__button {
+  @include style-button;
+
+  width: 280px;
+  height: 58px;
+
+  border: none;
+  font-size: 21px;
+  line-height: 26px;
+}

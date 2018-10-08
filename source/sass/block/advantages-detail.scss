@@ -1,0 +1,37 @@
+.advantages-detail {
+  @include list;
+
+  margin: 0;
+  padding: 33px 41px 37px 69px;
+  background-color: #ffffff;
+
+  text-align: left;
+  color: #000000;
+}
+
+.advantages-detail__item {
+  margin-bottom: 25px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.advantages-detail__title {
+  @include reset;
+  margin-bottom: 20px;
+
+  line-height: 26px;
+}
+
+.advantages-detail__description {
+  @include reset;
+  margin-bottom: 35px;
+
+  font-size: 14px;
+  color: $main-color;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

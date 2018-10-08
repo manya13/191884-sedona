@@ -1,0 +1,34 @@
+.page-main__back {
+  @include image-back;
+
+  height: 160px;
+
+  background-position: bottom;
+
+  &--index {
+    @include image-back;
+
+    height: 389px;
+    background-position: center;
+  }
+}
+
+.page-main__back-image {
+  margin-top: 51px;
+
+  &--index {
+    margin-top: 90px;
+  }
+}
+
+.page-main__header {
+  @include reset;
+  @include title;
+
+  margin-bottom: 30px;
+  padding-left: 32px;
+  padding-right: 33px;
+
+  font-weight: 700;
+  text-transform: $letter-type;
+}
