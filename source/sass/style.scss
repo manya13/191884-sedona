@@ -1,7 +1,8 @@
 @import "normalize";
 @import "mixin";
 @import "fonts";
-@import "body";
+@import "main";
+@import "./block/page-wrapper";
 @import "./block/page-header";
 @import "./block/main-nav";
 @import "./block/page-main";

@@ -1,3 +1,12 @@
 .social__list {
   @include list;
+
+  display: flex;
+}
+
+@media (min-width: $tablet-width) {
+  .social__list {
+    margin: 0;
+    padding: 0;
+  }
 }

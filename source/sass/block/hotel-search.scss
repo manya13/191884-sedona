@@ -34,3 +34,20 @@
 
   font-size: 21px;
 }
+
+@media (min-width: $tablet-width) {
+  .hotel-search__title {
+    font-size: 30px;
+  }
+
+  .hotel-search__instruction {
+    width: 450px;
+    margin: 0 auto 47px auto;
+  }
+
+  .hotel-search__button {
+    padding: 17px 136px 19px 136px;
+  }
+
+
+}
