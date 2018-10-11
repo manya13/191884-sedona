@@ -32,3 +32,43 @@
   font-weight: 700;
   text-transform: $letter-type;
 }
+
+@media (min-width: $tablet-width) {
+  .page-main__back {
+    height: 290px;
+
+    background-image: url("../img/bg-back-tablet@1x.jpg");
+
+    &--index {
+      height: 518px;
+    }
+  }
+
+  .page-main__header {
+    font-size: 21px;
+
+    &--photo {
+      font-size: 30px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-main__back {
+    height: 301px;
+
+    background-image: url("../img/bg-back-desktop@1x.jpg");
+    background-size: cover;
+
+    &--index {
+      height: 518px;
+
+      background-size: cover;
+    }
+  }
+
+  .page-main__header {
+    width: 500px;
+    margin: 0 auto;
+  }
+}

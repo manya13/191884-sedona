@@ -13,3 +13,11 @@
   color: #000000;
   text-transform: $letter-type;
 }
+
+@media (min-width: $tablet-width) {
+  .page-footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+  }
+}

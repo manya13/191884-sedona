@@ -35,3 +35,31 @@
     margin-bottom: 0;
   }
 }
+
+@media (min-width: $tablet-width) {
+  .advantages-detail {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 0;
+    padding-top: 160px;
+
+    text-align: center;
+  }
+
+  .advantages-detail__item {
+    margin-bottom: 60px;
+
+    &--house {
+      width: 180px;
+    }
+
+    &--souvenirs {
+      width: 180px;
+    }
+
+    &--food {
+      width: 176px;
+    }
+  }
+}

@@ -84,8 +84,138 @@
 
   width: 280px;
   height: 58px;
+  margin: 0;
+  padding: 0;
 
   border: none;
   font-size: 21px;
   line-height: 26px;
+}
+
+.feedback-form__footnote {
+  @include intro;
+  display: none;
+
+  text-transform: $letter-type;
+}
+
+@media (min-width: $tablet-width) {
+  .feedback-form__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 648px;
+    margin: 0 auto;
+  }
+
+  .feedback-form__intro {
+    padding: 0 135px 22px 134px;
+  }
+
+  .feedback-form__fieldset {
+    border: none;
+
+    &--full-name {
+      width: 265px;
+      padding: 0;
+      margin-left: auto;
+    }
+
+    &--impression {
+      width: 303px;
+      padding: 0;
+      order: -1;
+    }
+
+    &--contacts {
+      width: 100%;
+      padding: 0;
+    }
+
+    &--visited-places {
+      width: 445px;
+      margin: 0 auto;
+      padding: 0;
+    }
+
+    &--text {
+      width: 100%;
+      padding: 0;
+    }
+  }
+
+  .feedback-form__username {
+    width: 216px;
+  }
+
+  .feedback-form__surname,
+  .feedback-form__patronymic {
+    width: 178px;
+  }
+
+  .feedback-form__phone,
+  .feedback-form__email {
+    width: 648px;
+  }
+
+  .feedback-form__comment {
+    width: 648px;
+  }
+
+  .feedback-form__button {
+    width: 324px;
+  }
+
+  .feedback-form__footnote {
+    display: block;
+    margin-left: auto;
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .feedback-form__wrapper {
+    width: 960px;
+  }
+
+  .feedback-form__intro {
+    padding: 0 355px 22px 354px;
+  }
+
+  .feedback-form__fieldset {
+    &--full-name {
+      width: 400px;
+    }
+
+    &--visited-places {
+      width: 100%;
+    }
+  }
+
+  .feedback-form__username {
+    width: 350px;
+  }
+
+  .feedback-form__surname,
+  .feedback-form__patronymic {
+    width: 312px;
+  }
+
+  .feedback-form__phone,
+  .feedback-form__email {
+    width: 315px;
+  }
+
+  .feedback-form__comment {
+    width: 960px;
+  }
+
+  .feedback-form__label {
+    &--desktop {
+      display: none;
+    }
+  }
+
+  .feedback-form__button {
+    width: 480px;
+  }
 }

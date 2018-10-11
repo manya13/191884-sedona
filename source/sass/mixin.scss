@@ -4,6 +4,10 @@ $main-font: "PT Sans", "Arial", sans-serif;
 
 $letter-type: uppercase;
 
+$tablet-width: 768px;
+
+$desktop-width: 1280px;
+
 @mixin list {
   list-style: none;
 }

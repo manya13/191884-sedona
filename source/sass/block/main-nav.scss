@@ -28,3 +28,43 @@
   text-decoration: none;
   color: #ffffff;
 }
+
+@media (min-width: $tablet-width) {
+  .main-nav__list {
+    display: flex;
+
+    background-color: #ffffff;
+  }
+
+  .main-nav__item {
+    min-width: 153px;
+
+    box-shadow: none;
+
+    &:nth-child(3) {
+      margin-left: auto;
+    }
+
+    &:first-child,
+    &:last-child {
+      box-shadow: none;
+    }
+  }
+
+  .main-nav__item a {
+    font-size: 14px;
+    line-height: 26px;
+    text-decoration: none;
+    color: #000000;
+  }
+
+  .main-nav__control-nav {
+    display: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-nav__item {
+    min-width: 239px;
+  }
+}

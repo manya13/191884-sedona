@@ -19,3 +19,26 @@
   margin-bottom: 35px;
   padding: 0 41px 0 43px;
 }
+
+@media (min-width: $tablet-width) {
+  .video__title {
+    font-size: 30px;
+  }
+
+  .video__description {
+    margin-bottom: 75px;
+    padding: 0 150px;
+  }
+
+  .video__back {
+    width: 648px;
+    height: 499px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .video__back {
+    width: 800px;
+    height: 500px;
+  }
+}
