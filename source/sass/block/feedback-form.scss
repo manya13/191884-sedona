@@ -14,6 +14,7 @@
 }
 
 .feedback-form__fieldset {
+  position: relative;
   margin: 0;
   margin-bottom: 5px;
   padding: 0 20px 0 20px;
@@ -21,6 +22,10 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 
   text-align: left;
+
+  &--text {
+    border-bottom: none;
+  }
 }
 
 .feedback-form__hint {
@@ -33,43 +38,187 @@
   text-transform: $letter-type;
 }
 
+.feedback-form__list {
+  @include list;
+
+  margin: 0;
+  padding: 0;
+}
+
 .feedback-form__label {
   @include intro;
+
   text-transform: $letter-type;
+
+  &--contacts {
+    padding-left: 22px;
+
+    line-height: 40px;
+  }
 }
 
 .feedback-form__username {
   height: 58px;
-  width: 230px;
+  width: 75%;
 }
 
 .feedback-form__surname,
 .feedback-form__patronymic {
   height: 58px;
-  width: 192px;
+  width: 61%;
 }
 
 .feedback-form__phone,
 .feedback-form__email {
   height: 58px;
-  width: 280px;
+  width: 93%;
   margin-top: 10px;
+}
+
+.feedback-form__phone {
+  &--handset {
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 110px;
+      right: 20px;
+      width: 18px;
+      height: 18px;
+      padding: 21px 20px 19px 20px;
+
+      background-image: url("../img/icon-phone.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: #e6e6e6;
+    }
+  }
+}
+
+.feedback-form__email {
+  &--envelope {
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 229px;
+      right: 20px;
+      width: 18px;
+      height: 18px;
+      padding: 21px 20px 19px 20px;
+
+      background-image: url("../img/icon-mail.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: #e6e6e6;
+    }
+  }
 }
 
 .feedback-form__contacts .feedback-form__label {
   padding-left: 23px;
 }
 
-.feedback-form__label-filter {
+.feedback-form__item label {
+  position: relative;
   padding-left: 70px;
   padding-bottom: 52px;
+  width: 100%;
   float: left;
 
   font-weight: 700;
 }
 
+.feedback-form__option {
+    & + label {
+      &::before {
+        content: "";
+
+        position: absolute;
+        left: 0;
+        top: -15px;
+        width: 50px;
+        height: 50px;
+
+        background-color: #f2f2f2;
+        border-radius: 50%;
+
+        cursor: pointer;
+      }
+
+      &:hover {
+        &::before {
+          background-color: #e5e5e5;
+        }
+      }
+
+      &:active {
+        &::before {
+          background-color: #d5d5d5;
+        }
+      }
+    }
+
+    &:checked {
+      & + label {
+        &::after {
+          content: "";
+
+          position: absolute;
+          left: 15px;
+          width: 20px;
+          height: 20px;
+
+          background-color: #333333;
+          border-radius: 50%;
+
+          cursor: pointer;
+        }
+
+        &:active {
+          &::after {
+            opacity: 0.3;
+          }
+        }
+      }
+    }
+
+    &--checkbox {
+      & + label {
+        &::before {
+          border-radius: 15%;
+        }
+      }
+
+      &:checked {
+        & + label {
+          &::after {
+            width: 23px;
+            height: 16px;
+
+            background-image: url("../img/icon-tick.svg");
+            background-color: inherit;
+          }
+        }
+      }
+    }
+}
+
+.feedback-form__list {
+  &--visited-places {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.feedback-form__item {
+  &--visited-places {
+    width: 75%;
+  }
+}
+
 .feedback-form__comment {
-  width: 279px;
+  width: 93%;
   height: 160px;
 
   font-family: $main-font;
@@ -90,6 +239,16 @@
   border: none;
   font-size: 21px;
   line-height: 26px;
+
+  &:hover {
+    @include button-hover;
+  }
+
+  &:active {
+    @include button-active;
+
+    color: rgba(255, 255, 255, 0.3);
+  }
 }
 
 .feedback-form__footnote {
@@ -109,6 +268,8 @@
 
   .feedback-form__intro {
     padding: 0 135px 22px 134px;
+
+    border-bottom: none;
   }
 
   .feedback-form__fieldset {
@@ -132,7 +293,7 @@
     }
 
     &--visited-places {
-      width: 445px;
+      width: 100%;
       margin: 0 auto;
       padding: 0;
     }
@@ -143,22 +304,59 @@
     }
   }
 
+  .feedback-form__hint {
+    &--impression {
+      margin-bottom: 75px;
+      text-align: left;
+    }
+
+    &--name {
+      margin-bottom: 60px;
+      text-align: left;
+    }
+
+    &--contacts {
+      margin: 0 auto 25px auto;
+    }
+
+    &--places {
+      width: 278px;
+      margin: 0 auto 45px auto;
+    }
+  }
+
   .feedback-form__username {
-    width: 216px;
+    width: 195px;
   }
 
   .feedback-form__surname,
   .feedback-form__patronymic {
-    width: 178px;
+    width: 157px;
   }
 
   .feedback-form__phone,
   .feedback-form__email {
-    width: 648px;
+    width: 627px;
+  }
+
+  .feedback-form__phone {
+    &--handset {
+      &::after {
+        right: 0;
+      }
+    }
+  }
+
+  .feedback-form__email {
+    &--envelope {
+      &::after {
+        right: 0;
+      }
+    }
   }
 
   .feedback-form__comment {
-    width: 648px;
+    width: 627px;
   }
 
   .feedback-form__button {
@@ -169,6 +367,18 @@
     display: block;
     margin-left: auto;
     margin-top: 20px;
+  }
+
+  .feedback-form__list {
+    &--visited-places {
+      padding-left: 100px;
+    }
+  }
+
+  .feedback-form__item {
+    &--visited-places {
+      width: 250px;
+    }
   }
 }
 
@@ -189,33 +399,112 @@
     &--visited-places {
       width: 100%;
     }
+
+    &--impression {
+      &::after {
+        content: "";
+
+        position: absolute;
+        top: 20px;
+        left: 470px;
+        width: 1px;
+        height: 292px;
+
+        background-color: #e6e6e6;
+      }
+    }
+  }
+
+  .feedback-form__hint {
+    &--contacts,
+    &--places,
+    &--text {
+      &::before {
+        content: "";
+
+        position: absolute;
+        top: 33px;
+        left: 0;
+        width: 250px;
+        height: 1px;
+
+        background-color: #e6e6e6;
+      }
+    }
+
+    &--contacts,
+    &--places,
+    &--text {
+      &::after {
+        content: "";
+
+        position: absolute;
+        top: 33px;
+        right: 0;
+        width: 250px;
+        height: 1px;
+
+        background-color: #e6e6e6;
+      }
+    }
   }
 
   .feedback-form__username {
-    width: 350px;
+    width: 329px;
   }
 
   .feedback-form__surname,
   .feedback-form__patronymic {
-    width: 312px;
+    width: 291px;
   }
 
   .feedback-form__phone,
   .feedback-form__email {
-    width: 315px;
+    width: 294px;
+  }
+
+  .feedback-form__phone {
+    &--handset {
+      &::after {
+        top: 70px;
+        left: 359px;
+      }
+    }
+  }
+
+  .feedback-form__email {
+    &--envelope {
+      &::after {
+        top: 70px;
+        right: 33px;
+      }
+    }
+  }
+
+  .feedback-form__list {
+    &--visited-places {
+      padding-left: 0;
+      flex-wrap: nowrap;
+    }
+  }
+
+  .feedback-form__item {
+    &--visited-places {
+      width: 100%;
+    }
   }
 
   .feedback-form__comment {
-    width: 960px;
+    width: 939px;
   }
 
   .feedback-form__label {
     &--desktop {
       display: none;
     }
-  }
 
-  .feedback-form__button {
-    width: 480px;
+    &--contacts {
+      width: 484px;
+    }
   }
 }

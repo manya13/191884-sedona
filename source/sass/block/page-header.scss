@@ -1,9 +1,13 @@
 .page-header {
   @include reset;
-  margin-bottom: 56px;
 
   line-height: 40px;
   text-transform: $letter-type;
+}
+
+.page-header__logo-image {
+  position: relative;
+  z-index: 10;
 }
 
 @media (min-width: $tablet-width) {
@@ -11,16 +15,20 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    margin-bottom: 0;
+    margin-bottom: 45px;
   }
 
   .page-header__logo {
     position: absolute;
-    left: 333px;
+    left: 44%;
   }
 }
 
 @media (min-width: $desktop-width) {
+  .page-header {
+    margin-bottom: 4px;
+  }
+
   .page-header__logo {
     left: 505px;
   }

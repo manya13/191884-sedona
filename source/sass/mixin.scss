@@ -8,6 +8,8 @@ $tablet-width: 768px;
 
 $desktop-width: 1280px;
 
+$mobile-width-only: 767px;
+
 @mixin list {
   list-style: none;
 }
@@ -17,6 +19,14 @@ $desktop-width: 1280px;
   color: #ffffff;
   background-color: #81b3d2;
   text-transform: $letter-type;
+}
+
+@mixin button-hover {
+  background-color: #669ec0;
+}
+
+@mixin button-active {
+  background-color: #5496bd;
 }
 
 @mixin image-back {

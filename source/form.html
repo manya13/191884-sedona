@@ -9,11 +9,8 @@
   <body>
     <div class="page-wrapper">
       <header class="page-header">
-        <a class="page-header__logo" href="index.html">
-          <img class="page-header__logo-image" src="./img/logo-sedona-mobile.svg" width="102" height="83" alt="City of Sedona">
-        </a>
-        <nav class="main-nav">
-          <button class="main-nav__control-nav" type="button">Управление меню</button>
+        <nav class="main-nav main-nav--closed main-nav--nojs">
+          <button class="main-nav__control-nav" type="button"><span class="visually-hidden">Управление меню</span></button>
           <ul class="main-nav__list">
             <li class="main-nav__item">
               <a href="index.html">Главная</a>
@@ -21,7 +18,7 @@
             <li class="main-nav__item">
               <a href="photo.html">Фото и видео</a>
             </li>
-            <li class="main-nav__item">
+            <li class="main-nav__item main-nav__item--current">
               <a>Форма отзыва</a>
             </li>
             <li class="main-nav__item">
@@ -29,6 +26,9 @@
             </li>
           </ul>
         </nav>
+        <a class="page-header__logo" href="index.html">
+          <img class="page-header__logo-image" src="./img/logo-sedona-mobile.svg" width="102" height="83" alt="City of Sedona">
+        </a>
       </header>
       <main class="page-main">
         <div class="page-main__back">
@@ -39,7 +39,7 @@
           <p class="feedback-form__intro">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
           <div class="feedback-form__wrapper">
             <fieldset class="feedback-form__fieldset feedback-form__fieldset--full-name">
-              <legend class="feedback-form__hint">Представьтесь:</legend>
+              <legend class="feedback-form__hint feedback-form__hint--name">Представьтесь:</legend>
               <label class="feedback-form__label">Имя*:
                 <input class="field-form feedback-form__username" type="text" name="feedback-username" placeholder="Петр">
               </label>
@@ -51,43 +51,56 @@
               </label>
             </fieldset>
             <fieldset class="feedback-form__fieldset feedback-form__fieldset--contacts">
-              <legend class="feedback-form__hint">Контактная информация:</legend>
-              <label class="feedback-form__label"><span class="feedback-form__label--desktop">Контактный </span>телефон*:
-                <input class="field-form feedback-form__phone feedback-form__phone--handset" type="tel" name="feedback-phone" placeholder="Введите телефон">
+              <legend class="feedback-form__hint feedback-form__hint--contacts">Контактная информация:</legend>
+              <label class="feedback-form__label feedback-form__label--contacts"><span class="feedback-form__label--desktop">Контактный </span>телефон*:
+                <input class="field-form feedback-form__phone" type="tel" name="feedback-phone" placeholder="Введите телефон">
+                <span class="feedback-form__phone--handset"></span>
               </label>
-              <label class="feedback-form__label">Электронная почта*:
-                <input class="field-form feedback-form__email feedback-form__email--envelope" type="email" name="feedback-email" placeholder="Введите e-mail">
+              <label class="feedback-form__label feedback-form__label--contacts">Электронная почта*:
+                <input class="field-form feedback-form__email" type="email" name="feedback-email" placeholder="Введите e-mail">
+                <span class="feedback-form__email--envelope"></span>
               </label>
             </fieldset>
             <fieldset class="feedback-form__fieldset feedback-form__fieldset--impression">
-              <legend class="feedback-form__hint">Ваше общее впечатление:</legend>
-              <label class="feedback-form__label-filter">Скорее положительное
-                <input class="field-form feedback-form__radio" type="radio" name="impression" value="positive" checked>
-              </label>
-              <label class="feedback-form__label-filter">Скорее отрицательное
-                <input class="field-form feedback-form__radio" type="radio" name="impression" value="negative">
-              </label>
-              <label class="feedback-form__label-filter">Затрудняюсь ответить
-                <input class="field-form feedback-form__radio" type="radio" name="impression" value="unknown">
-              </label>
+              <legend class="feedback-form__hint feedback-form__hint--impression">Ваше общее впечатление:</legend>
+              <ul class="feedback-form__list">
+                <li class="feedback-form__item">
+                  <input class="feedback-form__option feedback-form__option--radio visually-hidden" type="radio" name="impression" value="positive" id="positive" checked>
+                  <label for="positive">Скорее положительное</label>
+                </li>
+                <li class="feedback-form__item">
+                  <input class="feedback-form__option feedback-form__option--radio visually-hidden" type="radio" name="impression" value="negative" id="negative">
+                  <label for="negative">Скорее отрицательное</label>
+                </li>
+                <li class="feedback-form__item">
+                  <input class="feedback-form__option feedback-form__option--radio visually-hidden" type="radio" name="impression" value="unknown" id="unknown">
+                  <label for="unknown">Затрудняюсь ответить</label>
+                </li>
+              </ul>
             </fieldset>
             <fieldset class="feedback-form__fieldset feedback-form__fieldset--visited-places">
-              <legend class="feedback-form__hint">Посещенные достопримечательности:</legend>
-              <label class="feedback-form__label-filter">Мост Дъявола
-                <input class="field-form feedback-form__checkbox" type="checkbox" name="bridge" checked>
-              </label>
-              <label class="feedback-form__label-filter">Гора-Колокол
-                <input class="field-form feedback-form__checkbox" type="checkbox" name="hora-bell" checked>
-              </label>
-              <label class="feedback-form__label-filter">Слайд-парк
-                <input class="field-form feedback-form__checkbox" type="checkbox" name="slide-park" checked>
-              </label>
-              <label class="feedback-form__label-filter">Красные скалы
-                <input class="field-form feedback-form__checkbox" type="checkbox" name="red-rocks">
-              </label>
+              <legend class="feedback-form__hint feedback-form__hint--places">Посещенные достопримечательности:</legend>
+              <ul class="feedback-form__list feedback-form__list--visited-places">
+                <li class="feedback-form__item feedback-form__item--visited-places">
+                  <input class="feedback-form__option feedback-form__option--checkbox visually-hidden" type="checkbox" name="bridge" id="bridge" checked>
+                  <label for="bridge">Мост Дъявола</label>
+                </li>
+                <li class="feedback-form__item feedback-form__item--visited-places">
+                  <input class="feedback-form__option feedback-form__option--checkbox visually-hidden" type="checkbox" name="hora-bell" id="hora" checked>
+                  <label for="hora">Гора-Колокол</label>
+                </li>
+                <li class="feedback-form__item feedback-form__item--visited-places">
+                  <input class="feedback-form__option feedback-form__option--checkbox visually-hidden" type="checkbox" name="slide-park" id="park" checked>
+                  <label for="park">Слайд-парк</label>
+                </li>
+                <li class="feedback-form__item feedback-form__item--visited-places">
+                  <input class="feedback-form__option feedback-form__option--checkbox visually-hidden" type="checkbox" name="red-rocks" id="rocks">
+                  <label for="rocks">Красные скалы</label>
+                </li>
+              </ul>
             </fieldset>
             <fieldset class="feedback-form__fieldset feedback-form__fieldset--text">
-              <legend class="feedback-form__hint">Опишите свои эмоции:</legend>
+              <legend class="feedback-form__hint feedback-form__hint--text">Опишите свои эмоции:</legend>
               <textarea class="field-form feedback-form__comment" name="feedback-text" placeholder="Опишите подробно все свои восторги"></textarea>
             </fieldset>
             <button type="submit" class="button feedback-form__button">Отправить отзыв</button>
@@ -100,31 +113,67 @@
         <div class="page-footer__social social">
           <ul class="social__list">
             <li class="social__item">
-              <a class="social__link social__link--twitter" href="#">Мы в твиттере</a>
+              <a class="social__link social__link--twitter" href="#"><span class="visually-hidden">Мы в твиттере</span>
+                <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17.5px" height="14.663px" viewBox="0 0 17.5 14.663" enable-background="new 0 0 17.5 14.663" xml:space="preserve">
+                  <g id="W6EeEF_1_">
+                    <g>
+                      <path fill="#ffffff" fill-rule="evenodd" clip-rule="evenodd" d="M11.283,0.153c1.736-0.484,3.074,0.264,3.685,1.15 c0.694-0.225,1.372-0.47,2.072-0.69c-0.004,0.841-0.538,1.478-0.883,1.728C16.861,2.506,17.5,1.86,17.5,1.86 c-0.175,0.977-1.035,1.746-1.611,1.977C15.65,10.429,12.617,14.793,5.507,14.66c-0.538,0,0.077,0-0.46,0 c-0.422,0-4.29-0.45-5.047-1.843c2.341,0.192,4.011-0.412,4.835-1.15c-0.989-0.293-2.761-0.464-3.07-2.881 c0.362,0.105,0.583,0.223,1.228,0.117C1.757,8.067,0.385,7.366,0.461,5.218c0.294,0.319,1.1,0.523,1.381,0.461 c-0.725-0.235-2.03-3.281-0.921-4.836C2.794,2.655,4.769,4.364,8.29,4.528C8.506,2.288,9.461,0.788,11.283,0.153z"/>
+                    </g>
+                  </g>
+                </svg>
+              </a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--facebook" href="#">Мы в Фейсбуке</a>
+              <a class="social__link social__link--facebook" href="#"><span class="visually-hidden">Мы в Фейсбуке</span>
+                <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="8.672px" height="18.944px" viewBox="0 0 8.672 18.944" enable-background="new 0 0 8.672 18.944" xml:space="preserve">
+                  <path fill="#ffffff" d="M6.275,3.356c0.799,0,1.599,0,2.398,0c0-1.119,0-2.237,0-3.356c-0.959,0-1.92,0-2.878,0C2.656,0.181,1.54,2.387,1.948,6.114 H0v3.518h1.959c0,3.104,0,6.208,0,9.312c1.279,0,2.559,0,3.837,0c0-3.104,0-6.208,0-9.312h2.857V6.114H5.787 C5.765,5.069,5.75,3.709,6.275,3.356z"/>
+                </svg>
+              </a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--youtube" href="#">Мы в Ютуб</a>
+              <a class="social__link social__link--youtube" href="#"><span class="visually-hidden">Мы в Ютуб</span>
+                <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="19.979px" height="14.015px" viewBox="0 0 19.979 14.015" enable-background="new 0 0 19.979 14.015" xml:space="preserve">
+                  <path fill="#ffffff" d="M17.145,0H2.835C1.275,0,0,1.275,0,2.835v8.345c0,1.56,1.275,2.835,2.835,2.835h14.31c1.56,0,2.835-1.275,2.835-2.835V2.835 C19.979,1.275,18.704,0,17.145,0z M7.036,10.392V3.623l6.769,3.384L7.036,10.392z"/>
+                </svg>
+              </a>
             </li>
           </ul>
         </div>
         <div class="page-footer__copyright copyright">
           <p class="copyright__text">Разработано</p>
-          <a class="copyright__link copyright__link--logo" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+          <a class="copyright__link copyright__link--logo" href="https://htmlacademy.ru/intensive/adaptive"><span class="visually-hidden">HTML Academy</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="33px" height="40px" viewBox="0 0 60 60"><path fill="#000000" d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z"/></svg>
+          </a>
         </div>
       </footer>
-      <section class="popup">
-        <h3 class="popup__title">Что-то пошло не так!</h3>
-        <p class="popup__hint">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-        <button class="button popup__button">Ок</button>
-      </section>
-      <section class="popup popup--success">
-        <h3 class="popup__title">Ваш отзыв отправлен</h3>
-        <p class="popup__hint popup__hint--success">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
-        <button class="button popup__button popup__button--success">Закрыть окно</button>
-      </section>
     </div>
+    <section class="popup">
+      <h3 class="popup__title">Что-то пошло не так!</h3>
+      <p class="popup__hint">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+      <button class="button popup__button">Ок</button>
+    </section>
+    <section class="popup popup--success">
+      <h3 class="popup__title">Ваш отзыв отправлен</h3>
+      <p class="popup__hint popup__hint--success">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
+      <button class="button popup__button popup__button--success">Закрыть окно</button>
+    </section>
+
+    <script>
+      var navMain = document.querySelector('.main-nav');
+      var navControl = document.querySelector('.main-nav__control-nav');
+
+      navMain.classList.remove('main-nav--nojs');
+
+      navControl.addEventListener('click', function() {
+        if (navMain.classList.contains('main-nav--closed')) {
+          navMain.classList.remove('main-nav--closed');
+          navMain.classList.add('main-nav--opened');
+        } else {
+          navMain.classList.add('main-nav--closed');
+          navMain.classList.remove('main-nav--opened');
+        }
+      });
+    </script>
+
   </body>
 </html>

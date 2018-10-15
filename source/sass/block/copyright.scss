@@ -1,4 +1,30 @@
+.copyright {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+  width: 135px;
+}
+
 .copyright__text {
+  margin: 0;
+  margin-top: 5px;
+  padding: 0;
   font-size: 14px;
   text-transform: $letter-type;
+}
+
+.copyright__link {
+    &:hover path {
+      fill: #81b3d2;
+    }
+
+    &:active path {
+      fill: #b3b3b3;
+    }
+}
+
+@media (min-width: $tablet-width) {
+  .copyright {
+    margin: 0 0 35px 0;
+  }
 }

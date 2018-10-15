@@ -1,4 +1,5 @@
 .popup {
+  display: none;
   padding: 42px 56px 0 57px;
 
   background-color: #ffffff;
@@ -44,6 +45,16 @@
     margin: 0;
     padding: 19px 81px 19px 75px;
     border: 20px solid #f2f2f2;
+  }
+
+  &:hover {
+    @include button-hover;
+  }
+
+  &:active {
+    @include button-active;
+
+    color: rgba(255, 255, 255, 0.3);
   }
 }
 

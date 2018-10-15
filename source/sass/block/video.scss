@@ -1,5 +1,5 @@
 .video {
-  margin-bottom: 133px;
+  margin: 0 auto 133px auto;
 
   text-transform: $letter-type;
 }
@@ -17,10 +17,90 @@
 
   margin: 0;
   margin-bottom: 35px;
-  padding: 0 41px 0 43px;
+  padding: 0 20px 0 20px;
+}
+
+.video__screen {
+  position: relative;
+  width: 100%;
+  // margin: 0 auto;
+}
+
+.video__back {
+  display: block;
+}
+
+.video__toggle {
+  position: absolute;
+  bottom: 0;
+  left: 21px;
+  width: 235px;
+  height: 3px;
+
+  background-color: rgba(0, 0, 0, 0.4);
+  border: 22px solid rgba(0, 0, 0, 0.5);
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: -4px;
+    left: 35px;
+    width: 10px;
+    height: 10px;
+
+    background-color: #ffffff;
+    border-radius: 50%;
+
+    cursor: pointer;
+  }
+}
+
+.video__control {
+  position: absolute;
+  left: 21px;
+  width: 280px;
+  height: 66px;
+
+  background-color: #f2f2f2;
+}
+
+.video__button {
+  position: absolute;
+  height: 20px;
+  top: 22px;
+
+  &--replay {
+    width: 16px;
+    left: 25px;
+  }
+
+  &--subtitles {
+    width: 32px;
+    left: 174px;
+  }
+
+  &--fullscreen {
+    width: 20px;
+    left: 237px;
+  }
+
+  &:hover path,
+  &:hover polygon {
+    fill: #333333;
+  }
+
+  &:active path,
+  &:active polygon {
+    fill: #b3b3b3;
+  }
 }
 
 @media (min-width: $tablet-width) {
+  .video {
+    width: 648px;
+  }
+
   .video__title {
     font-size: 30px;
   }
@@ -34,11 +114,88 @@
     width: 648px;
     height: 499px;
   }
+
+  .video__toggle {
+    left: 0;
+    width: 389px;
+    height: 3px;
+
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 45px solid rgba(0, 0, 0, 0.5);
+    border-left: 93px solid rgba(0, 0, 0, 0.5);
+    border-right: 166px solid rgba(0, 0, 0, 0.5);
+
+    &::after {
+      left: 135px;
+    }
+  }
+
+  .video__control {
+    left: 0;
+    bottom: 0;
+    width: 648px;
+    height: 93px;
+
+    background-color: inherit;
+  }
+
+  .video__button {
+    top: 35px;
+
+    & path,
+    & polygon {
+      fill: #ffffff;
+    }
+
+    &--replay {
+      left: 35px;
+    }
+
+    &--subtitles {
+      left: 524px;
+    }
+
+    &--fullscreen {
+      left: 587px;
+    }
+
+    &:hover path,
+    &:hover polygon {
+      fill: #c3c3c3;
+    }
+
+    &:active path,
+    &:active polygon {
+      fill: #959595;
+    }
+  }
 }
 
 @media (min-width: $desktop-width) {
+  .video {
+    width: 800px;
+  }
+
   .video__back {
     width: 800px;
     height: 500px;
+  }
+
+  .video__toggle {
+    width: 540px;
+  }
+
+  .video__control {
+    width: 800px;
+  }
+
+  .video__button {
+    &--subtitles {
+      left: 675px;
+    }
+
+    &--fullscreen {
+      left: 738px;
+    }
   }
 }

@@ -44,14 +44,28 @@
 }
 
 .gallery__like {
+  position: relative;
   padding-top: 10px;
+  padding-left: 35px;
 
   font-weight: 700;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    width: 22px;
+    height: 20px;
+
+    background-image: url("../img/icon-like.svg");
+  }
 }
 
 @media (min-width: $tablet-width) {
   .gallery__intro {
-    margin-bottom: 70px;
+    margin: 0 auto 70px auto;
+    width: 470px;
 
     border-bottom: none;
   }
@@ -128,5 +142,11 @@
 
   .gallery__author-photo {
     color: #ffffff;
+  }
+
+  .gallery__like {
+    &::before {
+      background-image: url("../img/icon-like-desktop.svg");
+    }
   }
 }

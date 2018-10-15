@@ -2,6 +2,42 @@
   @include list;
 
   display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 0;
+  width: 151px;
+}
+
+.social__link {
+  display: block;
+
+  background-color: #81b3d2;
+
+  &--twitter {
+    padding: 11px 14px 11px 14px;
+  }
+
+  &--facebook {
+    padding: 13px 19px 9px 20px;
+  }
+
+  &--youtube {
+    padding: 11px 13px 11px 13px;
+  }
+
+  &:hover {
+    @include button-hover;
+  }
+
+  &:active {
+    @include button-active;
+  }
+
+  &:active path {
+    fill: #89b7d2;
+  }
+
+
 }
 
 @media (min-width: $tablet-width) {

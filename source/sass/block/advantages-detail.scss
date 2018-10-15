@@ -1,8 +1,9 @@
 .advantages-detail {
   @include list;
 
+  // position: relative;
   margin: 0;
-  padding: 33px 41px 37px 69px;
+  padding: 33px 0 37px 69px;
   background-color: #ffffff;
 
   text-align: left;
@@ -10,10 +11,53 @@
 }
 
 .advantages-detail__item {
+  position: relative;
   margin-bottom: 25px;
 
   &:last-child {
     margin-bottom: 0;
+  }
+
+  &--house {
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: -10px;
+      left: -47px;
+      width: 37px;
+      height: 36px;
+
+      background-image: url("../img/icon-house.svg");
+    }
+  }
+
+  &--souvenirs {
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: -10px;
+      left: -49px;
+      width: 32px;
+      height: 38px;
+
+      background-image: url("../img/icon-gift.svg");
+    }
+  }
+
+  &--food {
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: -10px;
+      left: -48px;
+      width: 40px;
+      height: 35px;
+
+      background-image: url("../img/icon-burger.svg");
+    }
   }
 }
 
@@ -21,6 +65,7 @@
   @include reset;
   margin-bottom: 20px;
 
+  font-size: 18px;
   line-height: 26px;
 }
 
@@ -52,14 +97,64 @@
 
     &--house {
       width: 180px;
+
+      &::before {
+        top: -107px;
+        left: 53px;
+        width: 75px;
+        height: 72px;
+      }
     }
 
     &--souvenirs {
       width: 180px;
+      order: 1;
+
+      &::before {
+        top: -107px;
+        left: 57px;
+        width: 64px;
+        height: 75px;
+      }
     }
 
     &--food {
-      width: 176px;
+      width: 177px;
+
+      &::before {
+        top: -100px;
+        left: 50px;
+        width: 77px;
+        height: 68px;
+      }
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .advantages-detail__item {
+    &--house {
+      width: 281px;
+
+      &::before {
+        left: 100px;
+      }
+    }
+
+    &--souvenirs {
+      width: 216px;
+
+      &::before {
+        left: 75px;
+      }
+    }
+
+    &--food {
+      width: 285px;
+
+      &::before {
+        left: 103px;
+      }
     }
   }
 }
