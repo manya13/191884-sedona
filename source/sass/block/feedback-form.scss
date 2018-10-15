@@ -40,9 +40,12 @@
 
 .feedback-form__list {
   @include list;
+  @include reset;
 
-  margin: 0;
-  padding: 0;
+  &--visited-places {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .feedback-form__label {
@@ -130,84 +133,77 @@
 }
 
 .feedback-form__option {
-    & + label {
+  & + label {
+    &::before {
+      content: "";
+
+      position: absolute;
+      left: 0;
+      top: -15px;
+      width: 50px;
+      height: 50px;
+
+      background-color: #f2f2f2;
+      border-radius: 50%;
+
+      cursor: pointer;
+    }
+
+    &:hover {
       &::before {
+        background-color: #e5e5e5;
+      }
+    }
+
+    &:active {
+      &::before {
+        background-color: #d5d5d5;
+      }
+    }
+  }
+
+  &:checked {
+    & + label {
+      &::after {
         content: "";
 
         position: absolute;
-        left: 0;
-        top: -15px;
-        width: 50px;
-        height: 50px;
+        left: 15px;
+        width: 20px;
+        height: 20px;
 
-        background-color: #f2f2f2;
+        background-color: #333333;
         border-radius: 50%;
 
         cursor: pointer;
       }
 
-      &:hover {
-        &::before {
-          background-color: #e5e5e5;
+      &:active {
+        &::after {
+          opacity: 0.3;
         }
       }
+    }
+  }
 
-      &:active {
-        &::before {
-          background-color: #d5d5d5;
-        }
+  &--checkbox {
+    & + label {
+      &::before {
+        border-radius: 15%;
       }
     }
 
     &:checked {
       & + label {
         &::after {
-          content: "";
+          width: 23px;
+          height: 16px;
 
-          position: absolute;
-          left: 15px;
-          width: 20px;
-          height: 20px;
-
-          background-color: #333333;
-          border-radius: 50%;
-
-          cursor: pointer;
-        }
-
-        &:active {
-          &::after {
-            opacity: 0.3;
-          }
+          background-image: url("../img/icon-tick.svg");
+          background-color: inherit;
         }
       }
     }
-
-    &--checkbox {
-      & + label {
-        &::before {
-          border-radius: 15%;
-        }
-      }
-
-      &:checked {
-        & + label {
-          &::after {
-            width: 23px;
-            height: 16px;
-
-            background-image: url("../img/icon-tick.svg");
-            background-color: inherit;
-          }
-        }
-      }
-    }
-}
-
-.feedback-form__list {
-  &--visited-places {
-    display: flex;
-    flex-wrap: wrap;
   }
 }
 
@@ -430,11 +426,7 @@
 
         background-color: #e6e6e6;
       }
-    }
 
-    &--contacts,
-    &--places,
-    &--text {
       &::after {
         content: "";
 

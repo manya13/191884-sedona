@@ -14,13 +14,13 @@
 }
 
 .copyright__link {
-    &:hover path {
-      fill: #81b3d2;
-    }
+  &:hover path {
+    fill: #81b3d2;
+  }
 
-    &:active path {
-      fill: #b3b3b3;
-    }
+  &:active path {
+    fill: #b3b3b3;
+  }
 }
 
 @media (min-width: $tablet-width) {

@@ -36,13 +36,10 @@
   &:active path {
     fill: #89b7d2;
   }
-
-
 }
 
 @media (min-width: $tablet-width) {
   .social__list {
-    margin: 0;
-    padding: 0;
+    @include reset;
   }
 }
