@@ -1,13 +1,12 @@
 .feedback-form {
-  margin-bottom: 78px;
+  margin-bottom: 72px;
 }
 
 .feedback-form__intro {
   @include intro;
 
   margin: 0;
-  margin-bottom: 24px;
-  padding: 0 21px 22px 23px;
+  padding: 0 15px 16px 15px;
 
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   text-transform: $letter-type;
@@ -23,19 +22,45 @@
 
   text-align: left;
 
+  &--contacts {
+    padding-bottom: 21px;
+  }
+
   &--text {
     border-bottom: none;
+    margin-bottom: 9px;
   }
 }
 
 .feedback-form__hint {
   @include reset;
-  margin-bottom: 25px;
-  padding-top: 20px;
+  margin-bottom: 20px;
+  padding-top: 15px;
+  width: 100%;
 
   text-align: center;
   font-weight: 700;
   text-transform: $letter-type;
+
+  &--name {
+    padding-top: 19px;
+  }
+
+  &--contacts {
+    margin-bottom: 13px;
+  }
+
+  &--impression {
+    margin-bottom: 37px;
+  }
+
+  &--places {
+    margin-bottom: 30px;
+  }
+
+  &--text {
+    margin-bottom: 15px;
+  }
 }
 
 .feedback-form__list {
@@ -54,66 +79,59 @@
   text-transform: $letter-type;
 
   &--contacts {
-    padding-left: 22px;
+    display: block;
+    position: relative;
 
     line-height: 40px;
   }
 }
 
+.feedback-form__label-text {
+  padding-left: 23px;
+}
+
 .feedback-form__username {
   height: 58px;
   width: 75%;
+  margin-left: 10px;
 }
 
 .feedback-form__surname,
 .feedback-form__patronymic {
   height: 58px;
   width: 61%;
+  margin-left: 15px;
 }
 
 .feedback-form__phone,
 .feedback-form__email {
   height: 58px;
   width: 93%;
-  margin-top: 10px;
+  margin-bottom: 5px;
 }
 
-.feedback-form__phone {
-  &--handset {
-    &::after {
-      content: "";
+.feedback-form__icon {
+  &::after {
+    content: "";
 
-      position: absolute;
-      top: 110px;
-      right: 20px;
-      width: 18px;
-      height: 18px;
-      padding: 21px 20px 19px 20px;
+    position: absolute;
+    right: 0;
+    top: 40px;
+    width: 18px;
+    height: 18px;
+    padding: 21px 20px 19px 20px;
 
-      background-image: url("../img/icon-phone.svg");
-      background-repeat: no-repeat;
-      background-position: center;
-      background-color: #e6e6e6;
-    }
+    background-image: url("../img/icon-phone.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #e6e6e6;
   }
-}
 
-.feedback-form__email {
   &--envelope {
     &::after {
-      content: "";
-
-      position: absolute;
-      top: 229px;
-      right: 20px;
-      width: 18px;
-      height: 18px;
-      padding: 21px 20px 19px 20px;
+      top: 40px;
 
       background-image: url("../img/icon-mail.svg");
-      background-repeat: no-repeat;
-      background-position: center;
-      background-color: #e6e6e6;
     }
   }
 }
@@ -122,14 +140,25 @@
   padding-left: 23px;
 }
 
-.feedback-form__item label {
-  position: relative;
-  padding-left: 70px;
-  padding-bottom: 52px;
-  width: 100%;
-  float: left;
+.feedback-form__item {
+  label {
+    position: relative;
+    display: inline-block;
+    padding-left: 77px;
+    padding-bottom: 43px;
+    width: 100%;
 
-  font-weight: 700;
+    font-weight: 700;
+  }
+
+  &--visited-places {
+    width: 75%;
+    height: 80px;
+
+    &:last-child {
+      height: 65px;
+    }
+  }
 }
 
 .feedback-form__option {
@@ -139,9 +168,9 @@
 
       position: absolute;
       left: 0;
-      top: -15px;
-      width: 50px;
-      height: 50px;
+      top: -14px;
+      width: 53px;
+      height: 53px;
 
       background-color: #f2f2f2;
       border-radius: 50%;
@@ -168,7 +197,7 @@
         content: "";
 
         position: absolute;
-        left: 15px;
+        left: 17px;
         width: 20px;
         height: 20px;
 
@@ -196,6 +225,7 @@
     &:checked {
       & + label {
         &::after {
+          top: 3px;
           width: 23px;
           height: 16px;
 
@@ -207,15 +237,12 @@
   }
 }
 
-.feedback-form__item {
-  &--visited-places {
-    width: 75%;
-  }
-}
-
 .feedback-form__comment {
-  width: 93%;
+  width: 100%;
   height: 160px;
+  margin-bottom: 37px;
+  padding-top: 18px;
+  box-sizing: border-box;
 
   font-family: $main-font;
 }
@@ -233,7 +260,7 @@
   padding: 0;
 
   border: none;
-  font-size: 21px;
+  font-size: 18px;
   line-height: 26px;
 
   &:hover {
@@ -255,6 +282,10 @@
 }
 
 @media (min-width: $tablet-width) {
+  .feedback-form {
+    margin-bottom: 97px;
+  }
+
   .feedback-form__wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -263,7 +294,8 @@
   }
 
   .feedback-form__intro {
-    padding: 0 135px 22px 134px;
+    padding: 0 140px 60px;
+    font-size: 14px;
 
     border-bottom: none;
   }
@@ -296,28 +328,47 @@
 
     &--text {
       width: 100%;
+      margin-bottom: 14px;
       padding: 0;
     }
   }
 
   .feedback-form__hint {
+    font-size: 19px;
+
     &--impression {
       margin-bottom: 75px;
+
       text-align: left;
     }
 
     &--name {
       margin-bottom: 60px;
+      padding-top: 13px;
       text-align: left;
     }
 
     &--contacts {
-      margin: 0 auto 25px auto;
+      margin: 0 auto 18px;
+      padding-top: 32px;
     }
 
     &--places {
       width: 278px;
-      margin: 0 auto 45px auto;
+      margin: 0 auto 57px;
+      padding-top: 33px;
+    }
+
+    &--text {
+      margin-bottom: 57px;
+      padding-top: 20px;
+
+    }
+  }
+
+  .feedback-form__label {
+    &--contacts {
+      margin-bottom: 10px;
     }
   }
 
@@ -351,14 +402,6 @@
     }
   }
 
-  .feedback-form__comment {
-    width: 627px;
-  }
-
-  .feedback-form__button {
-    width: 324px;
-  }
-
   .feedback-form__footnote {
     display: block;
     margin-left: auto;
@@ -372,9 +415,18 @@
   }
 
   .feedback-form__item {
-    &--visited-places {
-      width: 250px;
+    label {
+      padding-bottom: 50px;
     }
+
+    &--visited-places {
+      width: 47%;
+      height: 88px;
+    }
+  }
+
+  .feedback-form__button {
+    width: 324px;
   }
 }
 
@@ -392,17 +444,23 @@
       width: 400px;
     }
 
+    &--contacts {
+      display: flex;
+    }
+
     &--visited-places {
       width: 100%;
     }
 
     &--impression {
+      width: 450px;
+
       &::after {
         content: "";
 
         position: absolute;
-        top: 20px;
-        left: 470px;
+        top: 43px;
+        right: -32px;
         width: 1px;
         height: 292px;
 
@@ -412,6 +470,33 @@
   }
 
   .feedback-form__hint {
+    &--impression {
+      padding-top: 38px;
+
+      text-align: center;
+    }
+
+    &--name {
+      padding-top: 38px;
+    }
+
+    &--contacts {
+      margin: 0 auto 18px;
+      padding-top: 32px;
+    }
+
+    &--places {
+      width: 278px;
+      margin: 0 auto 57px;
+      padding-top: 33px;
+    }
+
+    &--text {
+      margin-bottom: 57px;
+      padding-top: 20px;
+
+    }
+
     &--contacts,
     &--places,
     &--text {
@@ -491,12 +576,16 @@
   }
 
   .feedback-form__label {
-    &--desktop {
-      display: none;
-    }
-
     &--contacts {
       width: 484px;
     }
+  }
+
+  .feedback-form__label-phone {
+    display: none;
+  }
+
+  .feedback-form__label-text {
+    display: inline-block;
   }
 }

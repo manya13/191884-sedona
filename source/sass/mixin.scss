@@ -30,7 +30,7 @@ $mobile-width-only: 767px;
 }
 
 @mixin image-back {
-  margin-bottom: 39px;
+  margin-bottom: 36px;
 
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-color: #c6d0e6;
@@ -38,13 +38,13 @@ $mobile-width-only: 767px;
 }
 
 @mixin intro {
-  font-size: 14px;
-  line-height: 26px;
+  font-size: 12px;
+  line-height: 24px;
   color: $main-color;
 }
 
 @mixin title {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 26px;
 }
 
