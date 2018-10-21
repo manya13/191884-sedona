@@ -473,17 +473,6 @@
       padding-top: 32px;
     }
 
-    &--places {
-      width: 278px;
-      margin: 0 auto 57px;
-      padding-top: 33px;
-    }
-
-    &--text {
-      margin-bottom: 57px;
-      padding-top: 20px;
-    }
-
     &--contacts,
     &--places,
     &--text {
@@ -513,6 +502,10 @@
     }
 
     &--places {
+      width: 278px;
+      margin: 0 auto 57px;
+      padding-top: 33px;
+
       &::before {
         top: 58px;
       }
@@ -523,6 +516,9 @@
     }
 
     &--text {
+      margin-bottom: 57px;
+      padding-top: 20px;
+
       &::before {
         top: 31px;
       }
