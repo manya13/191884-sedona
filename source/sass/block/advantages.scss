@@ -19,6 +19,8 @@
 .advantages__list {
   @include reset;
   @include list;
+
+  position: relative;
   margin-bottom: 30px;
 
   background-color: rgb(238, 238, 238);
@@ -73,6 +75,23 @@
   display: block;
   width: 100%;
 }
+
+@media (max-width: $mobile-width-only) {
+  .advantages__list {
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: -18px;
+      left: 0;
+      width: 320px;
+      height: 37px;
+
+      background-image: url("../img/bg-triangle.svg");
+    }
+  }
+}
+
 
 @media (min-width: $tablet-width) {
   .advantages__intro {

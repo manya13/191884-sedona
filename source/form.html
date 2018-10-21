@@ -39,7 +39,7 @@
           <p class="feedback-form__intro">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
           <div class="feedback-form__wrapper">
             <fieldset class="feedback-form__fieldset feedback-form__fieldset--full-name">
-              <legend class="feedback-form__hint feedback-form__hint--name">Представьтесь:</legend>
+              <div class="feedback-form__hint feedback-form__hint--name">Представьтесь:</div>
               <label class="feedback-form__label">Имя*:
                 <input class="field-form feedback-form__username" type="text" name="feedback-username" placeholder="Петр">
               </label>
@@ -51,18 +51,18 @@
               </label>
             </fieldset>
             <fieldset class="feedback-form__fieldset feedback-form__fieldset--contacts">
-              <legend class="feedback-form__hint feedback-form__hint--contacts">Контактная информация:</legend>
-              <label class="feedback-form__label feedback-form__label--contacts"><div class="feedback-form__label-text"><span class="feedback-form__label-phone">Контактный </span>телефон*:</div>
+              <div class="feedback-form__hint feedback-form__hint--contacts">Контактная информация:</div>
+              <label class="feedback-form__label feedback-form__label--contacts"><span class="feedback-form__label-text"><span class="feedback-form__label-phone">Контактный </span>телефон*:</span>
                 <input class="field-form feedback-form__phone" type="tel" name="feedback-phone" placeholder="Введите телефон">
                 <span class="feedback-form__icon"></span>
               </label>
-              <label class="feedback-form__label feedback-form__label--contacts"><div class="feedback-form__label-text">Электронная почта*:</div>
+              <label class="feedback-form__label feedback-form__label--contacts feedback-form__label--email"><span class="feedback-form__label-text">Электронная почта*:</span>
                 <input class="field-form feedback-form__email" type="email" name="feedback-email" placeholder="Введите e-mail">
                 <span class="feedback-form__icon feedback-form__icon--envelope"></span>
               </label>
             </fieldset>
             <fieldset class="feedback-form__fieldset feedback-form__fieldset--impression">
-              <legend class="feedback-form__hint feedback-form__hint--impression">Ваше общее впечатление:</legend>
+              <div class="feedback-form__hint feedback-form__hint--impression">Ваше общее впечатление:</div>
               <ul class="feedback-form__list">
                 <li class="feedback-form__item">
                   <input class="feedback-form__option feedback-form__option--radio visually-hidden" type="radio" name="impression" value="positive" id="positive" checked>
@@ -79,7 +79,7 @@
               </ul>
             </fieldset>
             <fieldset class="feedback-form__fieldset feedback-form__fieldset--visited-places">
-              <legend class="feedback-form__hint feedback-form__hint--places">Посещенные достопримечательности:</legend>
+              <div class="feedback-form__hint feedback-form__hint--places">Посещенные достопримечательности:</div>
               <ul class="feedback-form__list feedback-form__list--visited-places">
                 <li class="feedback-form__item feedback-form__item--visited-places">
                   <input class="feedback-form__option feedback-form__option--checkbox visually-hidden" type="checkbox" name="bridge" id="bridge" checked>
@@ -100,7 +100,7 @@
               </ul>
             </fieldset>
             <fieldset class="feedback-form__fieldset feedback-form__fieldset--text">
-              <legend class="feedback-form__hint feedback-form__hint--text">Опишите свои эмоции:</legend>
+              <div class="feedback-form__hint feedback-form__hint--text">Опишите свои эмоции:</div>
               <textarea class="field-form feedback-form__comment" name="feedback-text" placeholder="Опишите подробно все свои восторги"></textarea>
             </fieldset>
             <button type="submit" class="button feedback-form__button">Отправить отзыв</button>
