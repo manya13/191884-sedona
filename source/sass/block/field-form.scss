@@ -1,10 +1,13 @@
 .field-form {
   @include reset;
-  margin-bottom: 21px;
+  @include title;
+
   padding-left: 21px;
 
   border: none;
   background-color: #f2f2f2;
+
+  font-weight: 700;
 
   &:hover {
     background-color: #e5e5e5;
