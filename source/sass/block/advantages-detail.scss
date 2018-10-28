@@ -2,7 +2,7 @@
   @include list;
 
   margin: 0;
-  padding: 24px 10px 40px 20px;
+  padding: 24px 10px 38px 20px;
   background-color: #ffffff;
 
   text-align: left;
@@ -41,6 +41,7 @@
 
   &--food {
     height: 35px;
+    margin-bottom: 18px;
 
     background-image: url("../img/icon-burger.svg");
   }
@@ -58,12 +59,13 @@
 .advantages-detail__description {
   @include reset;
 
-  width: 100%;
+  width: 230px;
   margin-bottom: 35px;
   padding-left: 50px;
 
-  font-size: 14px;
+  font-size: 13px;
   color: $main-color;
+  letter-spacing: -0.2px;
 
   &:last-child {
     margin-bottom: 0;
@@ -71,6 +73,10 @@
 
   br {
     display: none;
+  }
+
+  &--food {
+    width: 200px;
   }
 }
 
@@ -120,18 +126,19 @@
 
     &--food {
       width: 77px;
-      height: 68px;
+      height: 70px;
     }
   }
 
   .advantages-detail__title {
-    margin-bottom: 20px;
+    margin-bottom: 22px;
 
-    font-size: 18px;
+    font-size: 20px;
+    letter-spacing: -1px;
   }
 
   .advantages-detail__description {
-    width: 200px;
+    width: 175px;
     padding: 0;
 
     br {
@@ -147,11 +154,16 @@
 
   .advantages-detail__title {
     font-size: 20px;
+    letter-spacing: -1px;
   }
 
   .advantages-detail__description {
     width: 300px;
 
-    font-size: 13px;
+    &--house {
+      br {
+        display: none;
+      }
+    }
   }
 }

@@ -109,23 +109,14 @@
 
     box-shadow: none;
 
-    &:nth-child(3) {
-      margin-left: auto;
-    }
-
-    &:first-child,
-    &:last-child {
-      box-shadow: none;
-    }
-
     a {
       padding-top: 15px;
-      padding-left: 8px;
 
       font-size: 13px;
       line-height: 26px;
       text-decoration: none;
       color: #000000;
+      letter-spacing: -0.8px;
 
       &:hover {
         color: #81b3d2;
@@ -134,6 +125,21 @@
       &:active {
         color: rgba(0, 0, 0, 0.3);
       }
+    }
+
+    &:nth-child(3) {
+      margin-left: auto;
+
+      a {
+        padding-left: 15px;
+
+        letter-spacing: normal;
+      }
+    }
+
+    &:first-child,
+    &:last-child {
+      box-shadow: none;
     }
 
     &--current {
@@ -162,5 +168,15 @@
 @media (min-width: $desktop-width) {
   .main-nav__item {
     min-width: 239px;
+
+    &:nth-child(3) {
+      margin-left: auto;
+
+      a {
+        padding-left: 0;
+
+        letter-spacing: -0.8px;
+      }
+    }
   }
 }

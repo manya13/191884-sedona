@@ -12,34 +12,38 @@
 .page-footer__hashtag {
   margin-bottom: 36px;
 
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 700;
   color: #000000;
   text-transform: $letter-type;
+  letter-spacing: -0.8px;
 }
 
 .page-footer__social {
-  margin-bottom: 35px;
+  margin-bottom: 33px;
 }
-
 
 @media (min-width: $tablet-width) {
   .page-footer {
+    width: 645px;
     flex-direction: row;
     justify-content: space-between;
-    padding: 0 62px;
+    margin: 0 auto;
+    padding: 0;
   }
 
   .page-footer__hashtag {
     align-self: center;
     margin-bottom: 42px;
+  }
 
-    font-size: 19px;
+  .page-footer__social {
+    padding-left: 15px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .page-footer {
-    padding: 0 120px;
+    width: 960px;
   }
 }
