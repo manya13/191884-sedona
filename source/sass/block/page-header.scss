@@ -2,16 +2,18 @@
   @include reset;
 
   position: relative;
+  width: 320px;
+  margin: 0 auto;
   padding-bottom: 56px;
 
-  line-height: 39px;
+  line-height: 40px;
   text-transform: $letter-type;
 }
 
 .page-header__logo {
   position: absolute;
   bottom: -40px;
-  left: 35%;
+  left: 110px;
 }
 
 .page-header__logo-image {
@@ -23,17 +25,21 @@
   .page-header {
     display: flex;
     flex-direction: column;
-    margin-bottom: 0;
+    width: 768px;
     padding-bottom: 0;
   }
 
   .page-header__logo {
     top: 0;
-    left: 43%;
+    left: 333px;
   }
 }
 
 @media (min-width: $desktop-width) {
+  .page-header {
+    width: 1200px;
+  }
+
   .page-header__logo {
     left: 505px;
   }

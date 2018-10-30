@@ -112,11 +112,10 @@
     a {
       padding-top: 15px;
 
-      font-size: 13px;
+      font-size: 14px;
       line-height: 26px;
       text-decoration: none;
       color: #000000;
-      letter-spacing: -0.8px;
 
       &:hover {
         color: #81b3d2;
@@ -131,9 +130,7 @@
       margin-left: auto;
 
       a {
-        padding-left: 15px;
-
-        letter-spacing: normal;
+        padding-left: 10px;
       }
     }
 
@@ -174,8 +171,6 @@
 
       a {
         padding-left: 0;
-
-        letter-spacing: -0.8px;
       }
     }
   }

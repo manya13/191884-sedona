@@ -1,8 +1,10 @@
 $main-color: #333333;
 
-$main-font: "PT Sans", "Arial", sans-serif;
+$main-font: "PT Sans";
 
 $letter-type: uppercase;
+
+$mobile-width: 320px;
 
 $tablet-width: 768px;
 
@@ -38,14 +40,19 @@ $mobile-width-only: 767px;
 }
 
 @mixin intro {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 24px;
   color: $main-color;
 }
 
 @mixin title {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 26px;
+}
+
+@mixin description {
+  font-size: 14px;
+  line-height: 21px;
 }
 
 @mixin reset {

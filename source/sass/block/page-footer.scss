@@ -1,8 +1,9 @@
 .page-footer {
   display: flex;
   flex-direction: column;
-  margin: 0;
-  padding: 0 85px 23px 84px;
+  width: 320px;
+  margin: 0 auto;
+  padding: 0;
 }
 
 .page-footer a {
@@ -12,11 +13,10 @@
 .page-footer__hashtag {
   margin-bottom: 36px;
 
-  font-size: 20px;
+  font-size: 21px;
   font-weight: 700;
   color: #000000;
   text-transform: $letter-type;
-  letter-spacing: -0.8px;
 }
 
 .page-footer__social {
@@ -28,8 +28,6 @@
     width: 645px;
     flex-direction: row;
     justify-content: space-between;
-    margin: 0 auto;
-    padding: 0;
   }
 
   .page-footer__hashtag {

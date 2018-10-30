@@ -1,12 +1,12 @@
 .gallery__intro {
   @include intro;
 
-  width: 270px;
-  margin: 0 auto 19px;
-  padding: 0 0 25px;
+  width: 320px;
+  margin: 0 auto 17px;
+  padding: 0 23px 26px;
+  box-sizing: border-box;
 
-  font-size: 13px;
-  letter-spacing: -0.5px;
+  line-height: 24px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 
   text-transform: $letter-type;
@@ -15,37 +15,39 @@
 .gallery__list {
   @include reset;
   @include list;
+
   padding-top: 5px;
-  margin-bottom: 27px;
+  margin-bottom: 29px;
 
   text-align: left;
 }
 
 .gallery__item {
-  padding: 0 20px 16px 20px;
+  padding: 0 20px 17px 20px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  margin-bottom: 23px;
+  margin-bottom: 22px;
+}
+
+.gallery__photo-link {
+  display: block;
+  margin-bottom: 15px;
+
+  line-height: 1px;
 }
 
 .gallery__photo-title,
 .gallery__author-photo,
 .gallery__like {
   @include reset;
-
-  font-size: 12px;
-  line-height: 24px;
+  @include intro;
 }
 
 .gallery__photo-title {
-  padding-top: 7px;
-
   text-transform: $letter-type;
-  letter-spacing: 0.3px;
 }
 
 .gallery__author-photo {
   color: $main-color;
-  letter-spacing: 0.5px;
 }
 
 .gallery__like {
@@ -70,15 +72,11 @@
 
 @media (min-width: $tablet-width) {
   .gallery__intro {
-    margin: 0 auto 45px;
-    width: 430px;
+    margin: 0 auto 69px;
+    padding: 0;
+    width: 440px;
 
     border-bottom: none;
-    letter-spacing: -0.4px;
-
-    br {
-      display: none;
-    }
   }
 
   .gallery__list {
@@ -86,7 +84,7 @@
     flex-wrap: wrap;
     width: 648px;
     margin: 0 auto;
-    margin-bottom: 60px;
+    margin-bottom: 63px;
     padding: 0;
   }
 
@@ -107,6 +105,10 @@
       width: 648px;
       height: 400px;
     }
+  }
+
+  .gallery__photo-link {
+    margin-bottom: 5px;
   }
 
   .gallery__text {
@@ -141,11 +143,12 @@
 @media (min-width: $desktop-width) {
   .gallery__intro {
     width: 440px;
+    margin-bottom: 70px;
   }
 
   .gallery__list {
     width: 100%;
-    margin-bottom: 66px;
+    margin-bottom: 67px;
   }
 
   .gallery__photo {
@@ -162,6 +165,10 @@
     }
   }
 
+  .gallery__photo-link {
+    margin-bottom: 0;
+  }
+
   .gallery__text {
     position: absolute;
     bottom: 0;
@@ -175,6 +182,8 @@
 
   .gallery__photo-title {
     padding-top: 17px;
+
+    color: #ffffff;
   }
 
   .gallery__author-photo {
@@ -183,6 +192,8 @@
 
   .gallery__like {
     top: 30px;
+
+    color: #ffffff;
 
     &::before {
       background-image: url("../img/icon-like-desktop.svg");

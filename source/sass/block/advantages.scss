@@ -15,9 +15,7 @@
   width: 270px;
   margin: 0 auto 25px;
 
-  font-size: 13px;
   line-height: 26px;
-  letter-spacing: -0.2px;
 }
 
 .advantages__list {
@@ -49,7 +47,7 @@
     color: #ffffff;
   }
 
-  &--wo-photo {
+  &--gray-area {
     width: 280px;
     margin: 0 auto 26px;
     padding-bottom: 28px;
@@ -70,10 +68,12 @@
 
   margin: 0 auto 7px;
 
-  letter-spacing: -0.2px;
-
   br {
     display: none;
+  }
+
+  &--gray-area {
+    margin-bottom: 6px;
   }
 }
 
@@ -82,14 +82,13 @@
 }
 
 .advantages__description {
+  @include description;
+
   width: 280px;
   margin: 0 auto;
   padding: 16px 0 39px;
 
-  font-size: 13px;
-  letter-spacing: -0.3px;
-
-  &--wo-photo {
+  &--gray-area {
     padding-bottom: 0;
   }
 
@@ -99,10 +98,6 @@
 
   &--last {
     width: 255px;
-  }
-
-  br {
-    display: none;
   }
 }
 
@@ -166,10 +161,10 @@
       flex-grow: 1;
     }
 
-    &--wo-photo {
+    &--gray-area {
       width: 256px;
       margin-bottom: 0;
-      padding-bottom: 14px;
+      padding-bottom: 11px;
 
       border-bottom: none;
     }
@@ -184,39 +179,28 @@
     width: 160px;
     margin: 0 auto 8px;
 
-    font-size: 19px;
+    font-size: 21px;
 
     br {
       display: inline;
     }
 
-    &--wo-photo {
+    &--gray-area {
       width: 130px;
-
-      letter-spacing: -1px;
+      margin-bottom: 7px;
     }
   }
 
   .advantages__description {
     padding: 22px 0 31px;
-    width: 180px;
+    width: 170px;
 
-    br {
-      display: inline;
-    }
-
-    &--wo-photo {
+    &--gray-area {
       width: 175px;
     }
 
     &--way {
-      width: 150px;
-    }
-
-    &--bridge {
-      br {
-        display: none;
-      }
+      width: 145px;
     }
   }
 
@@ -237,7 +221,7 @@
   }
 
   .advantages__title {
-    &--wo-photo {
+    &--gray-area {
       width: 160px;
     }
 
@@ -250,12 +234,13 @@
     &:first-child,
     &:nth-child(2) {
       .advantages__title {
-        padding-top: 7px;
+        padding-top: 8px;
       }
     }
 
-    &--wo-photo {
+    &--gray-area {
       width: 400px;
+      padding-bottom: 14px;
     }
   }
 
@@ -263,22 +248,16 @@
     width: 290px;
     padding-bottom: 51px;
 
-    br {
-      display: none;
-    }
-
-    &--bridge {
-      br {
-        display: inline;
-      }
-    }
-
-    &--wo-photo {
+    &--gray-area {
       width: 310px;
     }
 
     &--way {
-      width: 280px;
+      width: 270px;
+    }
+
+    &--bridge {
+      width: 230px;
     }
   }
 }
