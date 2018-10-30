@@ -1,6 +1,6 @@
 .field-form {
   @include reset;
-  @include title;
+  @include text-size (18px, 26px);
 
   padding-left: 21px;
 
@@ -20,7 +20,7 @@
   }
 
   &::placeholder {
-    @include title;
+    @include text-size (18px, 26px);
 
     font-weight: 700;
     color: #000000;

@@ -5,17 +5,17 @@
   font-size: 18px;
   line-height: 21px;
 
-  text-transform: $letter-type;
+  text-transform: uppercase;
 }
 
 .advantages__intro {
-  @include intro;
+  @include text-size (14px, 26px);
   @include reset;
 
   width: 270px;
   margin: 0 auto 25px;
 
-  line-height: 26px;
+  color: $main-color;
 }
 
 .advantages__list {
@@ -64,7 +64,7 @@
 
 .advantages__title {
   @include reset;
-  @include title;
+  @include text-size (18px, 26px);
 
   margin: 0 auto 7px;
 
@@ -82,7 +82,7 @@
 }
 
 .advantages__description {
-  @include description;
+  @include text-size (14px, 21px);
 
   width: 280px;
   margin: 0 auto;

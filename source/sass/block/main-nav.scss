@@ -110,10 +110,10 @@
     box-shadow: none;
 
     a {
+      @include text-size (14px, 26px);
+
       padding-top: 15px;
 
-      font-size: 14px;
-      line-height: 26px;
       text-decoration: none;
       color: #000000;
 

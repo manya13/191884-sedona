@@ -49,14 +49,14 @@
 
 .advantages-detail__title {
   @include reset;
-  @include title;
+  @include text-size (18px, 26px);
 
   align-self: center;
 }
 
 .advantages-detail__description {
   @include reset;
-  @include description;
+  @include text-size (14px, 21px);
 
   width: 225px;
   padding-left: 50px;

@@ -6,12 +6,13 @@
 }
 
 .copyright__text {
-  @include intro;
+  @include text-size (14px, 24px);
 
   margin: 12px 7px 0 0;
   padding: 0;
 
-  text-transform: $letter-type;
+  text-transform: uppercase;
+  color: $main-color;
 }
 
 .copyright__link {

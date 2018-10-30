@@ -2,12 +2,12 @@
   @include reset;
 
   position: relative;
-  width: 320px;
+  width: $mobile-width;
   margin: 0 auto;
   padding-bottom: 56px;
 
   line-height: 40px;
-  text-transform: $letter-type;
+  text-transform: uppercase;
 }
 
 .page-header__logo {
@@ -25,7 +25,7 @@
   .page-header {
     display: flex;
     flex-direction: column;
-    width: 768px;
+    width: $tablet-width;
     padding-bottom: 0;
   }
 
@@ -37,7 +37,7 @@
 
 @media (min-width: $desktop-width) {
   .page-header {
-    width: 1200px;
+    width: $desktop-content-width;
   }
 
   .page-header__logo {
