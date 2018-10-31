@@ -142,7 +142,7 @@
 
   .video__wrapper {
     position: absolute;
-    top: 11px;
+    top: 12px;
     left: 10px;
 
     background-color: inherit;
@@ -165,12 +165,12 @@
     }
 
     &--subtitles {
-      width: 45px;
+      width: 40px;
       margin-left: auto;
     }
 
     &--fullscreen {
-      width: 73px;
+      width: 75px;
     }
   }
 }
@@ -182,7 +182,7 @@
   }
 
   .video__description {
-    margin-bottom: 70px;
+    margin-bottom: 72px;
     padding: 0 160px;
   }
 
@@ -197,5 +197,9 @@
 
   .video__scale {
     width: 540px;
+  }
+
+  .video__wrapper {
+    top: 13px;
   }
 }
