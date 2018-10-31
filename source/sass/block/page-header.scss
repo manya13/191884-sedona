@@ -1,26 +1,45 @@
 .page-header {
   @include reset;
-  margin-bottom: 56px;
+
+  position: relative;
+  width: $mobile-width;
+  margin: 0 auto;
+  padding-bottom: 56px;
 
   line-height: 40px;
-  text-transform: $letter-type;
+  text-transform: uppercase;
+}
+
+.page-header__logo {
+  position: absolute;
+  bottom: -40px;
+  left: 110px;
+}
+
+.page-header__logo-image {
+  position: relative;
+  z-index: 10;
 }
 
 @media (min-width: $tablet-width) {
   .page-header {
-    position: relative;
     display: flex;
     flex-direction: column;
-    margin-bottom: 0;
+    width: $tablet-width;
+    padding-bottom: 0;
   }
 
   .page-header__logo {
-    position: absolute;
+    top: 0;
     left: 333px;
   }
 }
 
 @media (min-width: $desktop-width) {
+  .page-header {
+    width: $desktop-content-width;
+  }
+
   .page-header__logo {
     left: 505px;
   }

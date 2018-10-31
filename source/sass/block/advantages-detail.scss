@@ -2,7 +2,7 @@
   @include list;
 
   margin: 0;
-  padding: 33px 41px 37px 69px;
+  padding: 24px 10px 38px 20px;
   background-color: #ffffff;
 
   text-align: left;
@@ -10,29 +10,65 @@
 }
 
 .advantages-detail__item {
-  margin-bottom: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  margin-bottom: 15px;
 
   &:last-child {
     margin-bottom: 0;
   }
 }
 
+.advantages-detail__icon {
+  width: 40px;
+  margin-right: 10px;
+  margin-bottom: 15px;
+
+  background-repeat: no-repeat;
+
+  &--house {
+    height: 36px;
+
+    background-image: url("../img/icon-house.svg");
+  }
+
+  &--souvenirs {
+    height: 38px;
+
+    background-image: url("../img/icon-gift.svg");
+  }
+
+  &--food {
+    height: 35px;
+    margin-bottom: 18px;
+
+    background-image: url("../img/icon-burger.svg");
+  }
+}
+
 .advantages-detail__title {
   @include reset;
-  margin-bottom: 20px;
+  @include text-size (18px, 26px);
 
-  line-height: 26px;
+  align-self: center;
 }
 
 .advantages-detail__description {
   @include reset;
-  margin-bottom: 35px;
+  @include text-size (14px, 21px);
 
-  font-size: 14px;
+  width: 225px;
+  padding-left: 50px;
+
   color: $main-color;
 
-  &:last-child {
+  &--souvenirs {
     margin-bottom: 0;
+  }
+
+  &--food {
+    width: 200px;
   }
 }
 
@@ -42,24 +78,81 @@
     justify-content: space-around;
     width: 100%;
     padding: 0;
-    padding-top: 160px;
+    padding-top: 57px;
 
     text-align: center;
   }
 
   .advantages-detail__item {
-    margin-bottom: 60px;
+    margin-bottom: 61px;
+    flex-direction: column;
+    align-items: center;
+
+    &:first-child {
+      margin-bottom: 0;
+      padding-top: 3px;
+    }
+
+    &:last-child {
+      padding-top: 5px;
+    }
+
+    &:nth-child(2) {
+      order: 1;
+    }
+  }
+
+  .advantages-detail__icon {
+    margin-right: 0;
+    margin-bottom: 27px;
 
     &--house {
-      width: 180px;
+      width: 75px;
+      height: 72px;
     }
 
     &--souvenirs {
-      width: 180px;
+      width: 64px;
+      height: 75px;
     }
 
     &--food {
-      width: 176px;
+      width: 77px;
+      height: 70px;
     }
+  }
+
+  .advantages-detail__title {
+    margin-bottom: 22px;
+
+    font-size: 21px;
+  }
+
+  .advantages-detail__description {
+    width: 165px;
+    padding: 0;
+
+    &--food {
+      width: 155px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .advantages-detail__item {
+    margin-bottom: 81px;
+  }
+
+  .advantages-detail__title {
+    font-size: 20px;
+  }
+
+  .advantages-detail__description {
+    width: 300px;
+  }
+
+  .advantages-detail__description-break {
+    display: inline-block;
+    width: 100%;
   }
 }

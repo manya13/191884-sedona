@@ -1,11 +1,16 @@
 .popup {
+  display: none;
+  width: $mobile-width;
+  height: 280px;
   padding: 42px 56px 0 57px;
+  box-sizing: border-box;
 
   background-color: #ffffff;
   box-shadow: 0 7px 15px 0 rgba(0, 1, 1, 0.15);
-  text-transform: $letter-type;
+  text-transform: uppercase;
 
   &--success {
+    height: 323px;
     padding: 0;
     padding-top: 45px;
   }
@@ -13,17 +18,15 @@
 
 .popup__title {
   @include reset;
-  @include title;
+  @include text-size (18px, 26px);
 
   margin-bottom: 27px;
 }
 
 .popup__hint {
+  @include text-size (14px, 24px);
   @include reset;
   margin-bottom: 23px;
-
-  font-size: 14px;
-  line-height: 24px;
 
   color: $main-color;
 
@@ -35,46 +38,70 @@
 
 .popup__button {
   @include style-button;
+  @include text-size (18px, 26px);
 
-  margin-bottom: 35px;
-  padding: 19px 79px 19px 78px;
+  width: 180px;
+  height: 58px;
+  margin-bottom: 0 auto 35px;
+  padding: 0;
   border: none;
 
   &--success {
-    margin: 0;
-    padding: 19px 81px 19px 75px;
+    width: 280px;
+    margin: 0 auto;
+    box-sizing: content-box;
+
     border: 20px solid #f2f2f2;
+  }
+
+  &:hover {
+    @include button-hover;
+  }
+
+  &:active {
+    @include button-active;
+
+    color: rgba(255, 255, 255, 0.3);
   }
 }
 
 @media (min-width: $tablet-width) {
   .popup {
-    width: 277px;
-    height: 100%;
+    width: 400px;
+    height: 347px;
     margin: 0 auto;
     padding: 60px 62px 0 61px;
 
     &--success {
       width: 640px;
       padding: 0;
-      padding-top: 40px;
+      padding-top: 51px;
     }
   }
 
   .popup__title {
-    font-size: 30px;
-    line-height: 40px;
+    @include text-size (30px, 40px);
+  }
+
+  .popup__hint {
+    &--success {
+      width: 420px;
+      margin: 0 auto 35px;
+      padding: 0;
+    }
   }
 
   .popup__button {
+    width: 272px;
     margin-bottom: 49px;
-    padding: 19px 123px 19px 122px;
+
+    font-size: 21px;
     border: none;
 
     &--success {
-      margin: 0;
-      padding: 19px 155px 19px 154px;
-      border: 40px solid #f2f2f2;
+      width: 458px;
+
+      border: 44px solid #f2f2f2;
       border-left: 92px solid #f2f2f2;
       border-right: 91px solid #f2f2f2;
     }

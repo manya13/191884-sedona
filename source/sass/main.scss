@@ -1,5 +1,5 @@
 body {
-  min-width: 320px;
+  min-width: $mobile-width;
   margin: 0 auto;
   padding: 0;
 
@@ -9,6 +9,7 @@ body {
   font-weight: 400;
   text-align: center;
   color: #000000;
+  background-color: #f2f2f2;
 }
 
 .visually-hidden:not(:focus):not(:active),

@@ -1,6 +1,10 @@
 .page-footer {
-  margin: 0;
-  padding: 0 85px 23px 84px;
+  display: flex;
+  flex-direction: column;
+  width: $mobile-width;
+  margin: 0 auto;
+  padding: 0;
+  padding-bottom: 10px;
 }
 
 .page-footer a {
@@ -8,16 +12,38 @@
 }
 
 .page-footer__hashtag {
+  margin-bottom: 36px;
+
   font-size: 21px;
   font-weight: 700;
   color: #000000;
-  text-transform: $letter-type;
+  text-transform: uppercase;
+}
+
+.page-footer__social {
+  margin-bottom: 33px;
 }
 
 @media (min-width: $tablet-width) {
   .page-footer {
-    display: flex;
-    justify-content: space-around;
+    width: 645px;
     padding: 0;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .page-footer__hashtag {
+    align-self: center;
+    margin-bottom: 42px;
+  }
+
+  .page-footer__social {
+    padding-left: 15px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-footer {
+    width: 960px;
   }
 }

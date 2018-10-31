@@ -1,19 +1,22 @@
 .feedback-form {
-  margin-bottom: 78px;
+  margin-bottom: 73px;
 }
 
 .feedback-form__intro {
-  @include intro;
+  @include text-size (14px, 24px);
 
-  margin: 0;
-  margin-bottom: 24px;
-  padding: 0 21px 22px 23px;
+  width: $mobile-width;
+  margin: 0 auto;
+  padding: 0 15px 16px;
+  box-sizing: border-box;
 
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  text-transform: $letter-type;
+  text-transform: uppercase;
+  color: $main-color;
 }
 
 .feedback-form__fieldset {
+  position: relative;
   margin: 0;
   margin-bottom: 5px;
   padding: 0 20px 0 20px;
@@ -21,56 +24,255 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 
   text-align: left;
+
+  &--contacts {
+    padding-bottom: 29px;
+  }
+
+  &--text {
+    border-bottom: none;
+    margin-bottom: 51px;
+  }
+
+  &--impression {
+    margin-bottom: 3px;
+  }
+
+  &--visited-places {
+    padding-bottom: 2px;
+  }
 }
 
 .feedback-form__hint {
   @include reset;
-  margin-bottom: 25px;
-  padding-top: 20px;
+  @include text-size (18px, 26px);
+
+  margin-bottom: 20px;
+  padding-top: 14px;
 
   text-align: center;
   font-weight: 700;
-  text-transform: $letter-type;
+  text-transform: uppercase;
+
+  &--name {
+    padding-top: 17px;
+    margin-bottom: 22px;
+  }
+
+  &--impression {
+    margin-bottom: 37px;
+  }
+
+  &--places {
+    margin-bottom: 31px;
+  }
+
+  &--text {
+    margin-bottom: 16px;
+  }
 }
 
-.feedback-form__label {
-  @include intro;
-  text-transform: $letter-type;
+.feedback-form__hint-line {
+  display: inline-block;
+  width: 250px;
+}
+
+.feedback-form__list {
+  @include list;
+  @include reset;
+
+  &--visited-places {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.feedback-form__container-contacts {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  label {
+    @include text-size (14px, 26px);
+
+    margin-bottom: 6px;
+    padding-left: 22px;
+
+    text-transform: uppercase;
+    color: $main-color;
+  }
+
+  &--phone {
+    margin-bottom: 12px;
+  }
 }
 
 .feedback-form__username {
   height: 58px;
   width: 230px;
+  box-sizing: border-box;
+  margin-left: auto;
 }
 
 .feedback-form__surname,
 .feedback-form__patronymic {
   height: 58px;
   width: 192px;
+  box-sizing: border-box;
+  margin-left: auto;
+}
+
+.feedback-form__patronymic {
+  width: 194px;
 }
 
 .feedback-form__phone,
 .feedback-form__email {
   height: 58px;
-  width: 280px;
-  margin-top: 10px;
+  width: 93%;
+  margin-bottom: 0;
 }
 
-.feedback-form__contacts .feedback-form__label {
-  padding-left: 23px;
+.feedback-form__icon {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 18px;
+  height: 18px;
+  padding: 21px 20px 19px 20px;
+
+  background-image: url("../img/icon-phone.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #e6e6e6;
+
+  &--envelope {
+    background-image: url("../img/icon-mail.svg");
+  }
 }
 
-.feedback-form__label-filter {
-  padding-left: 70px;
-  padding-bottom: 52px;
-  float: left;
+.feedback-form__item {
+  label {
+    @include text-size (14px, 24px);
 
-  font-weight: 700;
+    text-transform: uppercase;
+    color: $main-color;
+  }
+
+  &--name {
+    display: flex;
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin-bottom: 24px;
+    }
+
+    label {
+      padding-top: 17px;
+    }
+  }
+
+  &--filter {
+    label {
+      @include text-size (18px, 26px);
+
+      position: relative;
+      display: inline-block;
+      padding-left: 79px;
+      padding-bottom: 43px;
+      width: 100%;
+      box-sizing: border-box;
+
+      font-weight: 700;
+      text-transform: none;
+    }
+  }
+
+  &--visited-places {
+    width: 75%;
+    height: 80px;
+
+    &:last-child {
+      height: 66px;
+    }
+  }
+}
+
+.feedback-form__option + label {
+  &::before {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    top: -14px;
+    width: 56px;
+    height: 56px;
+
+    background-color: #f2f2f2;
+    border-radius: 50%;
+
+    cursor: pointer;
+  }
+
+  &:hover {
+    &::before {
+      background-color: #e5e5e5;
+    }
+  }
+
+  &:active {
+    &::before {
+      background-color: #d5d5d5;
+    }
+  }
+}
+
+.feedback-form__option:checked + label {
+  &::after {
+    content: "";
+
+    position: absolute;
+    left: 18px;
+    top: 3px;
+    width: 21px;
+    height: 21px;
+
+    background-color: #333333;
+    border-radius: 50%;
+
+    cursor: pointer;
+  }
+
+  &:active {
+    &::after {
+      opacity: 0.3;
+    }
+  }
+}
+
+.feedback-form__option--checkbox + label {
+  &::before {
+    border-radius: 15%;
+  }
+}
+
+.feedback-form__option--checkbox:checked + label {
+  &::after {
+    top: 6px;
+    width: 23px;
+    height: 16px;
+
+    background-image: url("../img/icon-tick.svg");
+    background-color: inherit;
+  }
 }
 
 .feedback-form__comment {
-  width: 279px;
+  display: block;
+  width: 100%;
   height: 160px;
+  padding-top: 17px;
+  box-sizing: border-box;
 
   font-family: $main-font;
 }
@@ -84,22 +286,37 @@
 
   width: 280px;
   height: 58px;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
 
   border: none;
   font-size: 21px;
   line-height: 26px;
+
+  &:hover {
+    @include button-hover;
+  }
+
+  &:active {
+    @include button-active;
+
+    color: rgba(255, 255, 255, 0.3);
+  }
 }
 
 .feedback-form__footnote {
-  @include intro;
+  @include text-size (14px, 26px);
   display: none;
 
-  text-transform: $letter-type;
+  text-transform: uppercase;
+  color: $main-color;
 }
 
 @media (min-width: $tablet-width) {
+  .feedback-form {
+    margin-bottom: 97px;
+  }
+
   .feedback-form__wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -108,7 +325,11 @@
   }
 
   .feedback-form__intro {
-    padding: 0 135px 22px 134px;
+    width: 445px;
+    margin-bottom: 61px;
+    padding: 0;
+
+    border-bottom: none;
   }
 
   .feedback-form__fieldset {
@@ -122,24 +343,106 @@
 
     &--impression {
       width: 303px;
+      margin-bottom: 31px;
       padding: 0;
       order: -1;
+
+      &::after {
+        content: "";
+
+        position: absolute;
+        top: 18px;
+        right: -20px;
+        width: 1px;
+        height: 292px;
+
+        background-color: #e6e6e6;
+      }
     }
 
     &--contacts {
       width: 100%;
+      margin-bottom: 53px;
       padding: 0;
     }
 
     &--visited-places {
-      width: 445px;
-      margin: 0 auto;
+      width: 100%;
+      margin: 0 auto 20px;
       padding: 0;
     }
 
     &--text {
       width: 100%;
+      margin-bottom: 58px;
       padding: 0;
+    }
+  }
+
+  .feedback-form__hint {
+    font-size: 21px;
+
+    &--impression {
+      margin-bottom: 74px;
+      padding-top: 13px;
+
+      text-align: left;
+    }
+
+    &--name {
+      margin-bottom: 58px;
+      padding-top: 13px;
+
+      text-align: left;
+    }
+
+    &--contacts,
+    &--places,
+    &--text {
+      &::after {
+        content: "";
+
+        position: absolute;
+        top: 13px;
+        left: 0;
+        width: 100%;
+        height: 1px;
+
+        background-color: #e6e6e6;
+      }
+    }
+
+    &--contacts {
+      margin: 0 auto 25px;
+      padding-top: 0;
+    }
+
+    &--places {
+      margin: 0 auto 56px;
+      padding-top: 0;
+
+      &::after {
+        top: 25px;
+      }
+    }
+
+    &--text {
+      margin-bottom: 56px;
+      padding-top: 0;
+    }
+  }
+
+  .feedback-form__hint-line {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    z-index: 10;
+    width: 400px;
+    background-color: #ffffff;
+
+    &--places {
+      width: 340px;
+      padding: 0 30px;
     }
   }
 
@@ -147,75 +450,237 @@
     width: 216px;
   }
 
-  .feedback-form__surname,
-  .feedback-form__patronymic {
+  .feedback-form__surname {
     width: 178px;
+  }
+
+  .feedback-form__patronymic {
+    width: 180px;
   }
 
   .feedback-form__phone,
   .feedback-form__email {
-    width: 648px;
+    width: 627px;
   }
 
-  .feedback-form__comment {
-    width: 648px;
+  .feedback-form__container-contacts {
+    &--phone {
+      margin-bottom: 23px;
+    }
+
+    label {
+      margin-bottom: 7px;
+    }
   }
 
-  .feedback-form__button {
-    width: 324px;
+  .feedback-form__phone {
+    &--handset {
+      &::after {
+        right: 0;
+      }
+    }
+  }
+
+  .feedback-form__email {
+    &--envelope {
+      &::after {
+        right: 0;
+      }
+    }
   }
 
   .feedback-form__footnote {
     display: block;
     margin-left: auto;
-    margin-top: 20px;
+    margin-top: 17px;
+  }
+
+  .feedback-form__list {
+    &--visited-places {
+      padding-left: 95px;
+    }
+  }
+
+  .feedback-form__item {
+    &--name {
+      margin-bottom: 20px;
+    }
+
+    &--filter {
+      label {
+        padding-bottom: 52px;
+        padding-left: 76px;
+      }
+    }
+
+    &--visited-places {
+      width: 47%;
+      height: 88px;
+
+      label {
+        padding-left: 79px;
+      }
+    }
+  }
+
+  .feedback-form__button {
+    width: 324px;
+    margin: 0;
+    padding-right: 7px;
   }
 }
 
 @media (min-width: $desktop-width) {
+  .feedback-form {
+    margin-bottom: 101px;
+  }
+
   .feedback-form__wrapper {
     width: 960px;
   }
 
   .feedback-form__intro {
-    padding: 0 355px 22px 354px;
+    margin-bottom: 20px;
   }
 
   .feedback-form__fieldset {
     &--full-name {
       width: 400px;
+      margin-bottom: 43px;
+    }
+
+    &--contacts {
+      display: flex;
+      flex-wrap: wrap;
+
+      margin-bottom: 52px;
     }
 
     &--visited-places {
       width: 100%;
+      margin-bottom: 19px;
     }
+
+    &--impression {
+      width: 430px;
+      margin-bottom: 28px;
+
+      &::after {
+        top: 43px;
+        right: -50px;
+      }
+    }
+  }
+
+  .feedback-form__hint {
+    &--impression {
+      padding-top: 38px;
+
+      text-align: center;
+    }
+
+    &--name {
+      margin-bottom: 58px;
+      padding-top: 38px;
+    }
+
+    &--contacts {
+      width: 100%;
+      margin: 0 auto 73px;
+    }
+
+    &--places {
+      margin: 0 auto 56px;
+
+      &::after {
+        top: 25px;
+      }
+    }
+
+    &--text {
+      margin-bottom: 57px;
+    }
+  }
+
+  .feedback-form__container-contacts {
+    flex-direction: row;
+    width: 480px;
+
+    label {
+      padding-left: 0;
+      margin: 3px 20px 0 0;
+      align-self: center;
+    }
+
+    &--phone {
+      margin-bottom: 0;
+      margin-right: 79px;
+      width: 400px;
+
+      label {
+        margin-right: 15px;
+      }
+    }
+  }
+
+  .feedback-form__label-phone {
+    display: none;
   }
 
   .feedback-form__username {
     width: 350px;
   }
 
-  .feedback-form__surname,
-  .feedback-form__patronymic {
+  .feedback-form__surname {
     width: 312px;
+  }
+
+  .feedback-form__patronymic {
+    width: 314px;
   }
 
   .feedback-form__phone,
   .feedback-form__email {
-    width: 315px;
+    width: 294px;
   }
 
-  .feedback-form__comment {
-    width: 960px;
+  .feedback-form__email {
+    width: 270px;
   }
 
-  .feedback-form__label {
-    &--desktop {
-      display: none;
+  .feedback-form__list {
+    &--filter {
+      padding-left: 5px;
+    }
+
+    &--visited-places {
+      padding-left: 0;
+      flex-wrap: nowrap;
+    }
+  }
+
+  .feedback-form__item {
+    &--visited-places {
+      width: 239px;
+      margin-right: 19px;
+
+      &:last-child {
+        width: 205px;
+        margin-right: 0;
+      }
+
+      &:nth-child(3) {
+        margin-right: 0;
+      }
+
+      label {
+        padding-left: 80px;
+      }
     }
   }
 
   .feedback-form__button {
     width: 480px;
+    padding: 0;
   }
 }

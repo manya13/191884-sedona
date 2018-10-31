@@ -2,11 +2,44 @@
   @include list;
 
   display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 0;
+  width: 151px;
+}
+
+.social__link {
+  display: block;
+
+  background-color: #81b3d2;
+
+  &--twitter {
+    padding: 13px 14px 9px;
+  }
+
+  &--facebook {
+    padding: 13px 19px 9px;
+  }
+
+  &--youtube {
+    padding: 13px 13px 9px;
+  }
+
+  &:hover {
+    @include button-hover;
+  }
+
+  &:active {
+    @include button-active;
+  }
+
+  &:active path {
+    fill: #89b7d2;
+  }
 }
 
 @media (min-width: $tablet-width) {
   .social__list {
-    margin: 0;
-    padding: 0;
+    @include reset;
   }
 }

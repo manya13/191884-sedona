@@ -2,11 +2,15 @@ $main-color: #333333;
 
 $main-font: "PT Sans", "Arial", sans-serif;
 
-$letter-type: uppercase;
+$mobile-width: 320px;
 
 $tablet-width: 768px;
 
+$desktop-content-width: 1200px;
+
 $desktop-width: 1280px;
+
+$mobile-width-only: 767px;
 
 @mixin list {
   list-style: none;
@@ -16,26 +20,28 @@ $desktop-width: 1280px;
   font-weight: 700;
   color: #ffffff;
   background-color: #81b3d2;
-  text-transform: $letter-type;
+  text-transform: uppercase;
+}
+
+@mixin button-hover {
+  background-color: #669ec0;
+}
+
+@mixin button-active {
+  background-color: #5496bd;
 }
 
 @mixin image-back {
-  margin-bottom: 39px;
+  margin-bottom: 36px;
 
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-color: #c6d0e6;
   background-repeat: no-repeat;
 }
 
-@mixin intro {
-  font-size: 14px;
-  line-height: 26px;
-  color: $main-color;
-}
-
-@mixin title {
-  font-size: 18px;
-  line-height: 26px;
+@mixin text-size($fz, $line-h) {
+  font-size: $fz;
+  line-height: $line-h;
 }
 
 @mixin reset {
