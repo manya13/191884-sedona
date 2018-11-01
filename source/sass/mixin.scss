@@ -12,6 +12,10 @@ $desktop-width: 1280px;
 
 $mobile-width-only: 767px;
 
+$retina-dpi: 144dpi;
+
+$retina-dppx: 1.5dppx;
+
 @mixin list {
   list-style: none;
 }

@@ -156,7 +156,7 @@
       flex-grow: 1;
     }
 
-    &:nth-child(2) img {
+    &:nth-child(2) picture {
       order: -1;
       flex-grow: 1;
     }
@@ -241,6 +241,11 @@
     &--gray-area {
       width: 400px;
       padding-bottom: 14px;
+    }
+
+    img {
+      width: 800px;
+      height: 256px;
     }
   }
 
