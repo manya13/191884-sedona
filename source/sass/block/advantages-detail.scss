@@ -22,8 +22,7 @@
 
 .advantages-detail__icon {
   width: 40px;
-  margin-right: 10px;
-  margin-bottom: 15px;
+  margin: 3px 8px 12px 2px;
 
   background-repeat: no-repeat;
 
@@ -35,13 +34,15 @@
 
   &--souvenirs {
     height: 38px;
+    margin-left: 5px;
+    margin-right: 5px;
 
     background-image: url("../img/icon-gift.svg");
   }
 
   &--food {
     height: 35px;
-    margin-bottom: 18px;
+    margin: 8px 10px 10px 0;
 
     background-image: url("../img/icon-burger.svg");
   }
@@ -103,8 +104,7 @@
   }
 
   .advantages-detail__icon {
-    margin-right: 0;
-    margin-bottom: 27px;
+    margin: 0 0 27px;
 
     &--house {
       width: 75px;
