@@ -32,9 +32,7 @@
 
   &:active {
     @include button-active;
-  }
 
-  &:active {
     fill: #89b7d2;
   }
 }
