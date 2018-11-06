@@ -12,6 +12,7 @@
   display: block;
 
   background-color: #81b3d2;
+  fill: #ffffff;
 
   &--twitter {
     padding: 13px 14px 9px;
@@ -31,9 +32,7 @@
 
   &:active {
     @include button-active;
-  }
 
-  &:active path {
     fill: #89b7d2;
   }
 }

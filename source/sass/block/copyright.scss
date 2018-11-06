@@ -8,7 +8,7 @@
 .copyright__text {
   @include text-size (14px, 24px);
 
-  margin: 12px 7px 0 0;
+  margin: 12px 14px 0 0;
   padding: 0;
 
   text-transform: uppercase;
@@ -16,11 +16,13 @@
 }
 
 .copyright__link {
-  &:hover path {
+  padding-top: 8px;
+
+  &:hover {
     fill: #81b3d2;
   }
 
-  &:active path {
+  &:active {
     fill: #b3b3b3;
   }
 }
@@ -33,5 +35,11 @@
   .copyright__text {
     margin-top: 11px;
     padding-left: 13px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .copyright__text {
+    padding-left: 10px;
   }
 }

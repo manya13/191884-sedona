@@ -79,18 +79,18 @@
 .video__button {
   height: 20px;
 
+  fill: #5c6870;
+
   &--subtitles {
     width: 93px;
     margin-left: auto;
   }
 
-  &:hover path,
-  &:hover polygon {
+  &:hover {
     fill: #333333;
   }
 
-  &:active path,
-  &:active polygon {
+  &:active {
     fill: #b3b3b3;
   }
 }
@@ -149,18 +149,13 @@
   }
 
   .video__button {
-    path,
-    polygon {
-      fill: #ffffff;
-    }
+    fill: #ffffff;
 
-    &:hover path,
-    &:hover polygon {
+    &:hover {
       fill: #c3c3c3;
     }
 
-    &:active path,
-    &:active polygon {
+    &:active {
       fill: #959595;
     }
 
