@@ -198,7 +198,8 @@
   }
 }
 
-.feedback-form__option + label {
+.feedback-form__option + label,
+.feedback-form__option:focus + label {
   &::before {
     content: "";
 
@@ -227,6 +228,12 @@
   }
 }
 
+.feedback-form__option:focus + label {
+  &::before {
+    background-color: #e5e5e5;
+  }
+}
+
 .feedback-form__option:checked + label {
   &::after {
     content: "";
@@ -250,9 +257,16 @@
   }
 }
 
-.feedback-form__option--checkbox + label {
+.feedback-form__option--checkbox + label,
+.feedback-form__option--checkbox:focus + label {
   &::before {
     border-radius: 15%;
+  }
+}
+
+.feedback-form__option--checkbox:focus + label {
+  &::before {
+    background-color: #e5e5e5;
   }
 }
 

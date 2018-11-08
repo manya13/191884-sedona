@@ -8,6 +8,10 @@
   width: 151px;
 }
 
+.social__item {
+  margin-right: 6px;
+}
+
 .social__link {
   display: block;
 
@@ -40,5 +44,7 @@
 @media (min-width: $tablet-width) {
   .social__list {
     @include reset;
+
+    min-width: 151px;
   }
 }

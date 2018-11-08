@@ -100,12 +100,14 @@
 @media (min-width: $tablet-width) {
   .main-nav__list {
     display: flex;
+    flex-wrap: wrap;
 
     background-color: #ffffff;
   }
 
   .main-nav__item {
     min-width: 20%;
+    margin-bottom: 0;
 
     box-shadow: none;
 
@@ -127,7 +129,7 @@
     }
 
     &:nth-child(3) {
-      margin-left: auto;
+      margin-left: 20%;
 
       a {
         padding-left: 10px;
@@ -167,7 +169,7 @@
     min-width: 239px;
 
     &:nth-child(3) {
-      margin-left: auto;
+      margin-left: 243px;
 
       a {
         padding-left: 0;
